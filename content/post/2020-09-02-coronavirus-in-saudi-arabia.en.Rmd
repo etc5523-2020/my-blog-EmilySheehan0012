@@ -5,8 +5,8 @@ date: '2020-09-02'
 slug: coronavirus-in-saudi-arabia
 categories: []
 tags: []
-subtitle: ''
-summary: ''
+subtitle: 'Comparison of the incidence of COVID-19 and MERS-COV in Saudi Arabia'
+summary: 'Comparison of the incidence of COVID-19 and MERS-COV in Saudi Arabia'
 authors: []
 lastmod: '2020-09-02T10:37:51+10:00'
 featured: no
@@ -38,7 +38,14 @@ saudi <- coronavirus %>%
            "cases")) 
 ```
 
-```{r}
+# Data Description
+
+The coronavirus data comprises of 7 variables and over 175,000 observations for a number of countries. The variables include; the date, province, country, latitude, longitude, type of case (i.e. confirmed/recovered) and number of daily cases. 
+
+The raw data has been collected by the John Hopkins University Centre for Systems Science and Engineering on a daily basis since the 22nd of January 2020. This data has been tidied and collated into a package titled _coronavirus_, which has been used for this analysis. 
+
+
+```{r interactive-table-saudi}
 interactive_saudi <- DT::datatable(saudi,
               colnames = c("Date",
                            "Confirmed/Recovered",
@@ -48,29 +55,34 @@ interactive_saudi <- DT::datatable(saudi,
 widgetframe::frameWidget(interactive_saudi)
 ```
 
-```{r}
-interactive_saudi1 <- DT::datatable(saudi,
-              colnames = c("Date",
-                           "Confirmed/Recovered",
-                           "Number of Cases"),
-              caption = "Number of Confirmed or Recovered Coronavirus Cases on a given Date in Saudi Arabia", 
-              options = list(pageLength = 4),
-              style = "bootstrap4")
-DT::saveWidget(interactive_saudi1, "interactive-saudi.html", selfcontained = FALSE)
-```
-
-
-```{r, results = "asis"}
-DT::datatable(interactive_saudi1)
-```
-
 
 
 ```{r}
 saudi_confirmed <- coronavirus %>%
   filter(country == "Saudi Arabia",
-         type == "confirmed") 
+         type == "confirmed") %>%
+  mutate(previous_day_confirmed = lag(cases),
+         new_confirmed = cases-previous_day_confirmed,
+         total_confirmed = sum(cases)) %>%
+  select(-country,
+         -lat,
+         -long,
+         -type,
+         -province)
 ```
 
+```{r}
+saudi_recovered <- coronavirus %>%
+  filter(country == "Saudi Arabia",
+         type == "recovered") %>%
+  mutate(previous_day_recovered = lag(cases),
+         new_recovered_cases = cases-previous_day_recovered,
+         total_recovered = sum(cases)) %>%
+  select(-country,
+         -lat,
+         -long,
+         -type,
+         -province)
+```
 
 
