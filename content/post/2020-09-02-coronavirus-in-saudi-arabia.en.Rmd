@@ -38,12 +38,22 @@ saudi <- coronavirus %>%
            "cases")) 
 ```
 
-# Data Description
+## Data Description
 
 The coronavirus data comprises of 7 variables and over 175,000 observations for a number of countries. The variables include; the date, province, country, latitude, longitude, type of case (i.e. confirmed/recovered) and number of daily cases. 
 
-The raw data has been collected by the John Hopkins University Centre for Systems Science and Engineering on a daily basis since the 22nd of January 2020. This data has been tidied and collated into a package titled _coronavirus_, which has been used for this analysis. 
+The raw data has been collected on a daily basis since the 22nd of January 2020 by John Hopkins University Center for Systems Science and Engineering. The sources for the raw data include; the World Health Organisation, the National Health Commission of the People’s Republic of China, the European Center for Disease Prevention and Control, the U.S Centers for Disease Control and Prevention, local media reports, 1point3acres, Worldometers.info, BNO, DXY and other state and national government health departments.
 
+This raw data has been tidied and collated into a package titled _coronavirus_, which has been used for this analysis. 
+
+## An Explanation 
+
+Coronavirus is the name given to a range of respiratory illnesses originating from the same family (Raoult et al., 2020). Each virus varys in its symptoms, with some strains being more fatal than others.
+Some of the viruses include; Middle Eastern Respiratory Syndrome (MERS-CoV), Severe acute respiratory syndrome (SARS-CoV) and COVID-19. 
+
+The Middle Eastern Respiratory Syndrome was first identified in Saudi Arabia in 2012. This analysis hopes to provide insight and compare the infection rate of MERS-CoV and COVID-19. 
+
+## A Comparison
 
 ```{r interactive-table-saudi}
 interactive_saudi <- DT::datatable(saudi,
@@ -86,3 +96,8 @@ saudi_recovered <- coronavirus %>%
 ```
 
 
+bib
+dataset 
+john hopkins origin - https://coronavirus.jhu.edu/map-faq
+
+an explanation - Raoult, D., Zumla, A., Locatelli, F., Ippolito, G., & Kroemer, G. (2020). Coronavirus infections: Epidemiological, clinical and immunological features and hypotheses. Cell Stress & Chaperones, 4(4), 66–75.

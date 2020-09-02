@@ -23,12 +23,26 @@
 &lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;div id=&#34;data-description&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Data Description&lt;/h1&gt;
+&lt;div id=&#34;data-description&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data Description&lt;/h2&gt;
 &lt;p&gt;The coronavirus data comprises of 7 variables and over 175,000 observations for a number of countries. The variables include; the date, province, country, latitude, longitude, type of case (i.e. confirmed/recovered) and number of daily cases.&lt;/p&gt;
-&lt;p&gt;The raw data has been collected by the John Hopkins University Centre for Systems Science and Engineering on a daily basis since the 22nd of January 2020. This data has been tidied and collated into a package titled &lt;em&gt;coronavirus&lt;/em&gt;, which has been used for this analysis.&lt;/p&gt;
+&lt;p&gt;The raw data has been collected on a daily basis since the 22nd of January 2020 by John Hopkins University Center for Systems Science and Engineering. The sources for the raw data include; the World Health Organisation, the National Health Commission of the People’s Republic of China, the European Center for Disease Prevention and Control, the U.S Centers for Disease Control and Prevention, local media reports, 1point3acres, Worldometers.info, BNO, DXY and other state and national government health departments.&lt;/p&gt;
+&lt;p&gt;This raw data has been tidied and collated into a package titled &lt;em&gt;coronavirus&lt;/em&gt;, which has been used for this analysis.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;an-explanation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;An Explanation&lt;/h2&gt;
+&lt;p&gt;Coronavirus is the name given to a range of respiratory illnesses originating from the same family (Raoult et al., 2020). Each virus varys in its symptoms, with some strains being more fatal than others.
+Some of the viruses include; Middle Eastern Respiratory Syndrome (MERS-CoV), Severe acute respiratory syndrome (SARS-CoV) and COVID-19.&lt;/p&gt;
+&lt;p&gt;The Middle Eastern Respiratory Syndrome was first identified in Saudi Arabia in 2012. This analysis hopes to provide insight and compare the infection rate of MERS-CoV and COVID-19.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;a-comparison&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;A Comparison&lt;/h2&gt;
 &lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:480px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/2020-09-02-coronavirus-in-saudi-arabia.en_files/figure-html//widgets/widget_interactive-table-saudi.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;p&gt;bib
+dataset
+john hopkins origin - &lt;a href=&#34;https://coronavirus.jhu.edu/map-faq&#34; class=&#34;uri&#34;&gt;https://coronavirus.jhu.edu/map-faq&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;an explanation - Raoult, D., Zumla, A., Locatelli, F., Ippolito, G., &amp;amp; Kroemer, G. (2020). Coronavirus infections: Epidemiological, clinical and immunological features and hypotheses. Cell Stress &amp;amp; Chaperones, 4(4), 66–75.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
