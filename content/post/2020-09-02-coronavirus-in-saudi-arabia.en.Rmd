@@ -1,0 +1,76 @@
+---
+title: Coronavirus in Saudi Arabia
+author: Emily Sheehan
+date: '2020-09-02'
+slug: coronavirus-in-saudi-arabia
+categories: []
+tags: []
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2020-09-02T10:37:51+10:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+```{r load-libraries, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE)
+library(tidyverse)
+library(coronavirus)
+library(widgetframe)
+```
+
+```{r load-data}
+data("coronavirus")
+```
+
+```{r filter-saudi}
+saudi <- coronavirus %>%
+  filter(country == "Saudi Arabia") %>%
+  select(c("date",
+           "type",
+           "cases")) 
+```
+
+```{r}
+interactive_saudi <- DT::datatable(saudi,
+              colnames = c("Date",
+                           "Confirmed/Recovered",
+                           "Number of Cases"),
+              caption = "Number of Confirmed or Recovered Coronavirus Cases on a given Date in Saudi Arabia", 
+              options = list(pageLength = 4))
+widgetframe::frameWidget(interactive_saudi)
+```
+
+```{r}
+interactive_saudi1 <- DT::datatable(saudi,
+              colnames = c("Date",
+                           "Confirmed/Recovered",
+                           "Number of Cases"),
+              caption = "Number of Confirmed or Recovered Coronavirus Cases on a given Date in Saudi Arabia", 
+              options = list(pageLength = 4),
+              style = "bootstrap4")
+DT::saveWidget(interactive_saudi1, "interactive-saudi.html", selfcontained = FALSE)
+```
+
+
+```{r, results = "asis"}
+DT::datatable(interactive_saudi1)
+```
+
+
+
+```{r}
+saudi_confirmed <- coronavirus %>%
+  filter(country == "Saudi Arabia",
+         type == "confirmed") 
+```
+
+
+
