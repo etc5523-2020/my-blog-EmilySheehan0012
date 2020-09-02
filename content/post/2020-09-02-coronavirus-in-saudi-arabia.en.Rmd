@@ -55,6 +55,12 @@ The Middle Eastern Respiratory Syndrome was first identified in Saudi Arabia in 
 
 ## A Comparison
 
+Since appearing in Saudi Arabia in 2012, there have been a total of 2494 confirmed cases of MERS-CoV worldwide. Saudi Arabia was home to around 2102 infections, and had 780 deaths.
+
+Comparatively, 
+
+
+
 ```{r interactive-table-saudi}
 interactive_saudi <- DT::datatable(saudi,
               colnames = c("Date",
@@ -74,11 +80,16 @@ saudi_confirmed <- coronavirus %>%
   mutate(previous_day_confirmed = lag(cases),
          new_confirmed = cases-previous_day_confirmed,
          total_confirmed = sum(cases)) %>%
+  filter(date != "2020-01-22") %>%
   select(-country,
          -lat,
          -long,
          -type,
-         -province)
+         -province) %>%
+  summarise(average_new_cases = mean(new_confirmed),
+            max_new_cases = max(new_confirmed),
+            min_new_cases = min(new_confirmed))
+saudi_confirmed
 ```
 
 ```{r}
@@ -101,3 +112,5 @@ dataset
 john hopkins origin - https://coronavirus.jhu.edu/map-faq
 
 an explanation - Raoult, D., Zumla, A., Locatelli, F., Ippolito, G., & Kroemer, G. (2020). Coronavirus infections: Epidemiological, clinical and immunological features and hypotheses. Cell Stress & Chaperones, 4(4), 66–75.
+
+info on mers - https://applications.emro.who.int/docs/EMRPUB-CSR-241-2019-EN.pdf?ua=1&ua=1&ua=1
