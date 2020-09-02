@@ -32,5 +32,5 @@ user_groups:
 - Visitors
 ---
 
-Emily Sheehan is a student at Monash University studying the Master's of Business Analytics. She has completed a Bachelor of Commerce at the University of Melbourne, and is interested in learning more about artifical intelligence and how data can be used to solve real world problems. 
+Emily Sheehan is a student at Monash University studying a Master's in Business Analytics. She has completed a Bachelor of Commerce at the University of Melbourne, and is interested in learning more about artifical intelligence and how data can be used to solve real world problems. 
 

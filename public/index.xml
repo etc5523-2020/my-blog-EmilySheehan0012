@@ -78,9 +78,9 @@
     
     <item>
       <title>Coronavirus in Saudi Arabia</title>
-      <link>/post/coronavirus-in-saudi-arabia/</link>
+      <link>/post/saudi/coronavirus-in-saudi-arabia/</link>
       <pubDate>Wed, 02 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/post/coronavirus-in-saudi-arabia/</guid>
+      <guid>/post/saudi/coronavirus-in-saudi-arabia/</guid>
       <description>
 &lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
@@ -101,12 +101,22 @@ Some of the viruses include; Middle Eastern Respiratory Syndrome (MERS-CoV), Sev
 &lt;/div&gt;
 &lt;div id=&#34;a-comparison&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;A Comparison&lt;/h2&gt;
+&lt;p&gt;Since appearing in Saudi Arabia in 2012, there have been a total of 2494 confirmed cases of MERS-CoV worldwide. Saudi Arabia was home to around 2102 infections, and had 780 deaths.&lt;/p&gt;
+&lt;p&gt;Comparatively,&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/saudi/2020-09-02-coronavirus-in-saudi-arabia.en_files/featured.jpg&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:480px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/2020-09-02-coronavirus-in-saudi-arabia.en_files/figure-html//widgets/widget_interactive-table-saudi.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/saudi/2020-09-02-coronavirus-in-saudi-arabia.en_files/figure-html//widgets/widget_interactive-table-saudi.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;pre&gt;&lt;code&gt;##   average_new_cases max_new_cases min_new_cases
+## 1          4.283784           867          -985&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;bib
 dataset
 john hopkins origin - &lt;a href=&#34;https://coronavirus.jhu.edu/map-faq&#34; class=&#34;uri&#34;&gt;https://coronavirus.jhu.edu/map-faq&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;an explanation - Raoult, D., Zumla, A., Locatelli, F., Ippolito, G., &amp;amp; Kroemer, G. (2020). Coronavirus infections: Epidemiological, clinical and immunological features and hypotheses. Cell Stress &amp;amp; Chaperones, 4(4), 66–75.&lt;/p&gt;
+&lt;p&gt;info on mers - &lt;a href=&#34;https://applications.emro.who.int/docs/EMRPUB-CSR-241-2019-EN.pdf?ua=1&amp;amp;ua=1&amp;amp;ua=1&#34; class=&#34;uri&#34;&gt;https://applications.emro.who.int/docs/EMRPUB-CSR-241-2019-EN.pdf?ua=1&amp;amp;ua=1&amp;amp;ua=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;mers data- &lt;a href=&#34;https://github.com/rambaut/MERS-Cases/tree/gh-pages&#34; class=&#34;uri&#34;&gt;https://github.com/rambaut/MERS-Cases/tree/gh-pages&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;image -&lt;a href=&#34;https://www.iexplore.com/destinations/saudi-arabia/travel-guides/middle-east/saudi-arabia/overview&#34; class=&#34;uri&#34;&gt;https://www.iexplore.com/destinations/saudi-arabia/travel-guides/middle-east/saudi-arabia/overview&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </description>
     </item>
