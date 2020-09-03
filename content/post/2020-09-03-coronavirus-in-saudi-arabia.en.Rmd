@@ -1,0 +1,122 @@
+---
+title: Coronavirus in Saudi Arabia
+author: Emily Sheehan
+date: '2020-09-03'
+slug: coronavirus-in-saudi-arabia
+categories: []
+tags: []
+subtitle: 'Comparison of the incidence of COVID-19 and MERS-COV in Saudi Arabia'
+summary: 'Comparison of the incidence of COVID-19 and MERS-COV in Saudi Arabia'
+authors: []
+lastmod: '2020-09-03T14:35:54+10:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+```{r load-libraries, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE)
+library(tidyverse)
+library(coronavirus)
+library(widgetframe)
+```
+
+```{r load-data}
+data("coronavirus")
+```
+
+```{r filter-saudi}
+saudi <- coronavirus %>%
+  filter(country == "Saudi Arabia") %>%
+  select(c("date",
+           "type",
+           "cases")) 
+```
+
+## Data Description
+
+The coronavirus data comprises of 7 variables and over 175,000 observations for a number of countries. The variables include; the date, province, country, latitude, longitude, type of case (i.e. confirmed/recovered) and number of daily cases. 
+
+The raw data has been collected on a daily basis since the 22nd of January 2020 by John Hopkins University Center for Systems Science and Engineering. The sources for the raw data include; the World Health Organisation, the National Health Commission of the People’s Republic of China, the European Center for Disease Prevention and Control, the U.S Centers for Disease Control and Prevention, local media reports, 1point3acres, Worldometers.info, BNO, DXY and other state and national government health departments.
+
+This raw data has been tidied and collated into a package titled _coronavirus_, which has been used for this analysis. 
+
+## An Explanation 
+
+Coronavirus is the name given to a range of respiratory illnesses originating from the same family (Raoult et al., 2020). Each virus varys in its symptoms, with some strains being more fatal than others.Some of the viruses include; Middle Eastern Respiratory Syndrome (MERS-CoV), Severe acute respiratory syndrome (SARS-CoV) and COVID-19. 
+
+The Middle Eastern Respiratory Syndrome was first identified in Saudi Arabia in 2012. This analysis hopes to provide insight and compare the infection rate of MERS-CoV and COVID-19. 
+
+## A Comparison
+
+Since appearing in Saudi Arabia in 2012, there have been a total of 2494 confirmed cases of MERS-CoV worldwide. Saudi Arabia was home to around 2102 infections, and had 780 deaths.
+
+Comparatively, 
+ 
+
+
+
+```{r interactive-table-saudi}
+interactive_saudi <- DT::datatable(saudi,
+              colnames = c("Date",
+                           "Confirmed/Recovered",
+                           "Number of Cases"),
+              caption = "Number of Confirmed or Recovered Coronavirus Cases on a given Date in Saudi Arabia", 
+              options = list(pageLength = 4))
+widgetframe::frameWidget(interactive_saudi)
+```
+
+```{r saudi-confirmed}
+saudi_confirmed <- coronavirus %>%
+  filter(country == "Saudi Arabia",
+         type == "confirmed") %>%
+  mutate(previous_day_confirmed = lag(cases),
+         new_confirmed = cases-previous_day_confirmed,
+         total_confirmed = sum(cases)) %>%
+  filter(date != "2020-01-22") %>%
+  select(-country,
+         -lat,
+         -long,
+         -type,
+         -province) %>%
+  summarise(average_new_cases = mean(new_confirmed),
+            max_new_cases = max(new_confirmed),
+            min_new_cases = min(new_confirmed))
+saudi_confirmed
+```
+
+```{r}
+saudi_recovered <- coronavirus %>%
+  filter(country == "Saudi Arabia",
+         type == "recovered") %>%
+  mutate(previous_day_recovered = lag(cases),
+         new_recovered_cases = cases-previous_day_recovered,
+         total_recovered = sum(cases)) %>%
+  filter(date != "2020-01-22") %>%
+  select(-country,
+         -lat,
+         -long,
+         -type,
+         -province) %>%
+  summarise(average_recovered_cases = mean(new_recovered_cases),
+            max_recovered_cases = max(new_recovered_cases),
+            min_recovered_cases = min(new_recovered_cases))
+saudi_recovered
+```
+
+
+bib
+dataset 
+john hopkins origin - https://coronavirus.jhu.edu/map-faq
+
+an explanation - Raoult, D., Zumla, A., Locatelli, F., Ippolito, G., & Kroemer, G. (2020). Coronavirus infections: Epidemiological, clinical and immunological features and hypotheses. Cell Stress & Chaperones, 4(4), 66–75.
+
+info on mers - https://applications.emro.who.int/docs/EMRPUB-CSR-241-2019-EN.pdf?ua=1&ua=1&ua=1
+
+
+- image -https://www.iexplore.com/destinations/saudi-arabia/travel-guides/middle-east/saudi-arabia/overview
