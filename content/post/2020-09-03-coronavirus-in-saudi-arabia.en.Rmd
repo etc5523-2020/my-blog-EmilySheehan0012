@@ -115,7 +115,7 @@ saudi_recovered <- coronavirus %>%
             total = sum(cases))
 ```
 
-The maximum number of new cases on any given day was `r  saudi_confirmed$max_new_cases` cases, which is approximately `r percent(saudi_confirmed$max_new_cases/2102, accuracy = 0.01)` of the total number of MERS-CoV infections in Saudi Arabia over an 8-year period, emphasizing the magnitude of COVID-19. The average number of new infections per day is approximately `r saudi_confirmed$average_new_cases` cases, whilst the average number of recovered cases per day is `r saudi_recovered$average_recovered_cases` cases. The maximum number of recovered cases on a given day was `r saudi_recovered$max_recovered_cases` cases. 
+The maximum number of new cases on any given day was `r  saudi_confirmed$max_new_cases` cases, which is approximately `r percent(saudi_confirmed$max_new_cases/2102, accuracy = 0.01)` of the total number of MERS-CoV infections in Saudi Arabia over an 8-year period, emphasizing the magnitude of COVID-19. The average number of new infections per day is approximately `r round(saudi_confirmed$average_new_cases)` cases, whilst the average number of recovered cases per day is approximately `r round(saudi_recovered$average_recovered_cases)` cases. The maximum number of recovered cases on a given day was `r saudi_recovered$max_recovered_cases` cases. 
 
 ```{r recovered-table}
 saudi_recovered %>%
