@@ -61,15 +61,6 @@ Comparatively, there have been well **over** 317,000 cases of COVID-19 in Saudi 
 
 Ultimately, the summary statistics and the interactive table suggest a clear difference in the incidence of MERS-CoV and COVID-19. Although MERS-CoV is much more fatal with an alarmingly high death rate, COVID-19 is much more infectious. 
 
-```{r interactive-table-saudi}
-interactive_saudi <- DT::datatable(saudi,
-              colnames = c("Date",
-                           "Confirmed/Recovered",
-                           "Number of Cases"),
-              caption = "Number of Confirmed or Recovered Coronavirus Cases on a given Date in Saudi Arabia", 
-              options = list(pageLength = 4))
-widgetframe::frameWidget(interactive_saudi)
-```
 
 ```{r saudi-confirmed}
 saudi_confirmed <- coronavirus %>%
@@ -85,8 +76,9 @@ saudi_confirmed <- coronavirus %>%
          -type,
          -province) %>%
   summarise(average_new_cases = mean(new_confirmed),
-            max_new_cases = max(new_confirmed)) %>%
-  kable(col.names = c("Average New Cases", "Maximum Number of New Cases"), 
+            max_new_cases = max(new_confirmed),
+            total = sum(cases)) %>%
+  kable(col.names = c("Average New Cases per day", "Maximum Number of New Cases per day", "Total Number of Cases"), 
         caption = "Summary Statistics for New COVID-19 Cases in Saudi Arabia") %>%
   kable_styling()
 saudi_confirmed
@@ -106,18 +98,42 @@ saudi_recovered <- coronavirus %>%
          -type,
          -province) %>%
   summarise(average_recovered_cases = mean(new_recovered_cases),
-            max_recovered_cases = max(new_recovered_cases)) %>%
-  kable(col.names = c("Average Recovered Cases", "Maximum Number of Recovered Cases"), 
+            max_recovered_cases = max(new_recovered_cases),
+            total = sum(cases)) %>%
+  kable(col.names = c("Average Recovered Cases per day", "Maximum Number of Recovered Cases per day", "Total Number of Recovered Cases"), 
         caption = "Summary Statistics for Recovered COVID-19 Cases in Saudi Arabia") %>%
   kable_styling()
 saudi_recovered
 ```
 
+```{r interactive-table-saudi}
+interactive_saudi <- DT::datatable(saudi,
+              colnames = c("Date",
+                           "Confirmed/Recovered",
+                           "Number of Cases"),
+              caption = "Number of Confirmed or Recovered Coronavirus Cases on a given Date in Saudi Arabia", 
+              options = list(pageLength = 8))
+widgetframe::frameWidget(interactive_saudi)
+```
 
-bib
-dataset 
-john hopkins origin - https://coronavirus.jhu.edu/map-faq
 
-an explanation - Raoult, D., Zumla, A., Locatelli, F., Ippolito, G., & Kroemer, G. (2020). Coronavirus infections: Epidemiological, clinical and immunological features and hypotheses. Cell Stress & Chaperones, 4(4), 66–75.
+## References 
 
-info on mers - https://applications.emro.who.int/docs/EMRPUB-CSR-241-2019-EN.pdf?ua=1&ua=1&ua=1
+Bhaskar Karambelkar (2017). widgetframe: 'Htmlwidgets' in Responsive 'iframes'. R package version 0.3.1.
+  https://CRAN.R-project.org/package=widgetframe
+  
+Hao Zhu (2020). kableExtra: Construct Complex Table with 'kable' and Pipe Syntax. R package version 1.2.1.
+  https://CRAN.R-project.org/package=kableExtra
+
+Middle East respiratory syndrome coronavirus (MERS-CoV). (2020, March 10). Retrieved 4 September 2020, from   
+  https://www.who.int/emergencies/mers-cov/en/  
+
+Rami Krispin and Jarrett Byrnes (2020). coronavirus: The 2019 Novel Coronavirus COVID-19 (2019-nCoV) Dataset.
+  R package version 0.3.0.9000. https://github.com/RamiKrispin/coronavirus
+  
+Raoult, D., Zumla, A., Locatelli, F., Ippolito, G., & Kroemer, G. (2020). Coronavirus infections: Epidemiological, clinical
+  and immunological features and hypotheses. Cell Stress & Chaperones, 4(4), 66–75.
+  
+Wickham et al., (2019). Welcome to the tidyverse. Journal of Open Source Software, 4(43), 1686,
+  https://doi.org/10.21105/joss.01686
+

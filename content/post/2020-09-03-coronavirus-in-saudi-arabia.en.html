@@ -17,11 +17,11 @@ image:
 projects: []
 ---
 
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
 <script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
 <script src="/rmarkdown-libs/pymjs/pym.v1.js"></script>
 <script src="/rmarkdown-libs/widgetframe-binding/widgetframe.js"></script>
-<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
-<link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
 
 
 <div id="data-description" class="section level2">
@@ -40,8 +40,6 @@ projects: []
 <p>Since appearing in Saudi Arabia in 2012, there have been a total of 2494 confirmed cases of MERS-CoV worldwide. Saudi Arabia was home to around 2102 infections, and had 780 deaths.</p>
 <p>Comparatively, there have been well <strong>over</strong> 317,000 cases of COVID-19 in Saudi Arabia since early 2020. The summary tables below provide some insight into the new cases and recovered cases. The maximum number of new cases on any given day was 867 cases, which is over 40% of the total number of MERS-CoV infections in Saudi Arabia over 8 years. The average number of new infections is around 4.283784 cases per day, while the average number of recovered cases per day is 5.085586. The maximum number of recovered cases on a given day was 5014 cases.</p>
 <p>Ultimately, the summary statistics and the interactive table suggest a clear difference in the incidence of MERS-CoV and COVID-19. Although MERS-CoV is much more fatal with an alarmingly high death rate, COVID-19 is much more infectious.</p>
-<div id="htmlwidget-1" style="width:100%;height:480px;" class="widgetframe html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1">{"x":{"url":"/post/2020-09-03-coronavirus-in-saudi-arabia.en_files/figure-html//widgets/widget_interactive-table-saudi.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:saudi-confirmed">Table 1: </span>Summary Statistics for New COVID-19 Cases in Saudi Arabia
@@ -49,20 +47,26 @@ projects: []
 <thead>
 <tr>
 <th style="text-align:right;">
-Average New Cases
+Average New Cases per day
 </th>
 <th style="text-align:right;">
-Maximum Number of New Cases
+Maximum Number of New Cases per day
+</th>
+<th style="text-align:right;">
+Total Number of Cases
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:right;">
-4.283784
+3.642857
 </td>
 <td style="text-align:right;">
 867
+</td>
+<td style="text-align:right;">
+317486
 </td>
 </tr>
 </tbody>
@@ -74,27 +78,45 @@ Maximum Number of New Cases
 <thead>
 <tr>
 <th style="text-align:right;">
-Average Recovered Cases
+Average Recovered Cases per day
 </th>
 <th style="text-align:right;">
-Maximum Number of Recovered Cases
+Maximum Number of Recovered Cases per day
+</th>
+<th style="text-align:right;">
+Total Number of Recovered Cases
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:right;">
-5.085586
+4.446429
 </td>
 <td style="text-align:right;">
 5014
 </td>
+<td style="text-align:right;">
+292510
+</td>
 </tr>
 </tbody>
 </table>
-<p>bib
-dataset
-john hopkins origin - <a href="https://coronavirus.jhu.edu/map-faq" class="uri">https://coronavirus.jhu.edu/map-faq</a></p>
-<p>an explanation - Raoult, D., Zumla, A., Locatelli, F., Ippolito, G., &amp; Kroemer, G. (2020). Coronavirus infections: Epidemiological, clinical and immunological features and hypotheses. Cell Stress &amp; Chaperones, 4(4), 66–75.</p>
-<p>info on mers - <a href="https://applications.emro.who.int/docs/EMRPUB-CSR-241-2019-EN.pdf?ua=1&amp;ua=1&amp;ua=1" class="uri">https://applications.emro.who.int/docs/EMRPUB-CSR-241-2019-EN.pdf?ua=1&amp;ua=1&amp;ua=1</a></p>
+<div id="htmlwidget-1" style="width:100%;height:480px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"url":"/post/2020-09-03-coronavirus-in-saudi-arabia.en_files/figure-html//widgets/widget_interactive-table-saudi.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="references" class="section level2">
+<h2>References</h2>
+<p>Bhaskar Karambelkar (2017). widgetframe: ‘Htmlwidgets’ in Responsive ‘iframes’. R package version 0.3.1.
+<a href="https://CRAN.R-project.org/package=widgetframe" class="uri">https://CRAN.R-project.org/package=widgetframe</a></p>
+<p>Hao Zhu (2020). kableExtra: Construct Complex Table with ‘kable’ and Pipe Syntax. R package version 1.2.1.
+<a href="https://CRAN.R-project.org/package=kableExtra" class="uri">https://CRAN.R-project.org/package=kableExtra</a></p>
+<p>Middle East respiratory syndrome coronavirus (MERS-CoV). (2020, March 10). Retrieved 4 September 2020, from<br />
+<a href="https://www.who.int/emergencies/mers-cov/en/" class="uri">https://www.who.int/emergencies/mers-cov/en/</a></p>
+<p>Rami Krispin and Jarrett Byrnes (2020). coronavirus: The 2019 Novel Coronavirus COVID-19 (2019-nCoV) Dataset.
+R package version 0.3.0.9000. <a href="https://github.com/RamiKrispin/coronavirus" class="uri">https://github.com/RamiKrispin/coronavirus</a></p>
+<p>Raoult, D., Zumla, A., Locatelli, F., Ippolito, G., &amp; Kroemer, G. (2020). Coronavirus infections: Epidemiological, clinical
+and immunological features and hypotheses. Cell Stress &amp; Chaperones, 4(4), 66–75.</p>
+<p>Wickham et al., (2019). Welcome to the tidyverse. Journal of Open Source Software, 4(43), 1686,
+<a href="https://doi.org/10.21105/joss.01686" class="uri">https://doi.org/10.21105/joss.01686</a></p>
 </div>
