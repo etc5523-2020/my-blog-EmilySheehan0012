@@ -7,16 +7,16 @@
     <description>Posts</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 03 Sep 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/post/featured.jpg</url>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
       <link>/post/</link>
     </image>
     
     <item>
       <title>Coronavirus in Saudi Arabia</title>
-      <link>/post/coronavirus-in-saudi-arabia/</link>
+      <link>/post/saudi/coronavirus-in-saudi-arabia/</link>
       <pubDate>Thu, 03 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/post/coronavirus-in-saudi-arabia/</guid>
+      <guid>/post/saudi/coronavirus-in-saudi-arabia/</guid>
       <description>
 &lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
@@ -135,8 +135,7 @@ Total Number of Recovered Cases
 &lt;/table&gt;
 &lt;p&gt;Ultimately, the summary statistics and the interactive table suggest a clear difference in the prevalance of MERS-CoV and COVID-19. Although MERS-CoV is much more fatal with an alarmingly high death rate, COVID-19 is much more infectious.&lt;/p&gt;
 &lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:480px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/2020-09-03-coronavirus-in-saudi-arabia.en_files/figure-html//widgets/widget_interactive-table-saudi.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2020-09-03-coronavirus-in-saudi-arabia.en_files/featured.jpg&#34; /&gt;&lt;/p&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/saudi/2020-09-03-coronavirus-in-saudi-arabia.en_files/figure-html//widgets/widget_interactive-table-saudi.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;References&lt;/h2&gt;

@@ -10,10 +10,12 @@ summary: 'Comparison of the incidence of COVID-19 and MERS-COV in Saudi Arabia'
 authors: []
 lastmod: '2020-09-03T14:35:54+10:00'
 featured: no
+thumbnail: "saudi/featured.jpg"
 image:
-  caption: ''
-  focal_point: ''
-  preview_only: no
+  placement: 2
+  caption: 'My caption'
+  focal point: ''
+  preview_only: false
 projects: []
 ---
 
@@ -147,7 +149,6 @@ interactive_saudi <- DT::datatable(saudi,
 widgetframe::frameWidget(interactive_saudi)
 ```
 
-![](/post/2020-09-03-coronavirus-in-saudi-arabia.en_files/featured.jpg)
 
 ## References 
 
