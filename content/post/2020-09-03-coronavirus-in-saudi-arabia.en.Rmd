@@ -135,7 +135,6 @@ saudi_recovered %>%
   kable_minimal()
 ```
 
-
 Ultimately, the summary statistics and the interactive table suggest a clear difference in the prevalance of MERS-CoV and COVID-19. Although MERS-CoV is much more fatal with an alarmingly high death rate, COVID-19 is much more infectious. 
 
 ```{r interactive-table-saudi}
@@ -148,6 +147,7 @@ interactive_saudi <- DT::datatable(saudi,
 widgetframe::frameWidget(interactive_saudi)
 ```
 
+![](/post/2020-09-03-coronavirus-in-saudi-arabia.en_files/featured.jpg)
 
 ## References 
 
