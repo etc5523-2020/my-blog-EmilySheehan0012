@@ -122,10 +122,10 @@ Total Number of Cases
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-3.642857
+1411.049
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-867
+4919
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
 317486
@@ -154,10 +154,10 @@ Total Number of Deaths
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-0.1205357
+17.58222
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-20
+58
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
 3956
@@ -165,7 +165,7 @@ Total Number of Deaths
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;The maximum number of new cases on any given day was 867 cases, which is approximately 41.25% of the total number of MERS-CoV infections in Saudi Arabia over an 8-year period, emphasizing the magnitude of COVID-19. The average number of new infections per day is approximately 3.6428571 cases, whilst the average number of recovered cases per day is 4.4464286 cases. The maximum number of recovered cases on a given day was 5014 cases.&lt;/p&gt;
+&lt;p&gt;The maximum number of new cases on any given day was 4919 cases, which is approximately 234.02% of the total number of MERS-CoV infections in Saudi Arabia over an 8-year period, emphasizing the magnitude of COVID-19. The average number of new infections per day is approximately 1411.0488889 cases, whilst the average number of recovered cases per day is 1300.0444444 cases. The maximum number of recovered cases on a given day was 7718 cases.&lt;/p&gt;
 &lt;table class=&#34; lightable-minimal&#34; style=&#39;font-family: &#34;Trebuchet MS&#34;, verdana, sans-serif; margin-left: auto; margin-right: auto;&#39;&gt;
 &lt;caption&gt;
 &lt;span id=&#34;tab:recovered-table&#34;&gt;Table 3: &lt;/span&gt;Summary Statistics for Recovered COVID-19 Cases in Saudi Arabia
@@ -186,10 +186,10 @@ Total Number of Recovered Cases
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-4.446429
+1300.044
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-5014
+7718
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
 292510

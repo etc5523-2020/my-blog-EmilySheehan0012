@@ -61,17 +61,13 @@ Since appearing in Saudi Arabia in 2012, MERS has spread to 27 countries resulti
 saudi_confirmed <- coronavirus %>%
   filter(country == "Saudi Arabia",
          type == "confirmed") %>%
-  mutate(previous_day_confirmed = lag(cases),
-         new_confirmed = cases-previous_day_confirmed,
-         total_confirmed = sum(cases)) %>%
-  filter(date != "2020-01-22") %>%
   select(-country,
          -lat,
          -long,
          -type,
          -province) %>%
-  summarise(average_new_cases = mean(new_confirmed),
-            max_new_cases = max(new_confirmed),
+  summarise(average_new_cases = mean(cases),
+            max_new_cases = max(cases),
             total = sum(cases)) 
 ```
 
@@ -86,17 +82,13 @@ saudi_confirmed %>%
 saudi_death <- coronavirus %>%
   filter(country == "Saudi Arabia",
          type == "death") %>%
-  mutate(previous_day_death = lag(cases),
-         new_death = cases-previous_day_death,
-         total_death = sum(cases)) %>%
-  filter(date != "2020-01-22") %>%
   select(-country,
          -lat,
          -long,
          -type,
          -province) %>%
-  summarise(average_death_cases = mean(new_death),
-            max_death_cases = max(new_death),
+  summarise(average_death_cases = mean(cases),
+            max_death_cases = max(cases),
             total = sum(cases)) 
 ```
 
@@ -113,17 +105,13 @@ saudi_death %>%
 saudi_recovered <- coronavirus %>%
   filter(country == "Saudi Arabia",
          type == "recovered") %>%
-  mutate(previous_day_recovered = lag(cases),
-         new_recovered_cases = cases-previous_day_recovered,
-         total_recovered = sum(cases)) %>%
-  filter(date != "2020-01-22") %>%
   select(-country,
          -lat,
          -long,
          -type,
          -province) %>%
-  summarise(average_recovered_cases = mean(new_recovered_cases),
-            max_recovered_cases = max(new_recovered_cases),
+  summarise(average_recovered_cases = mean(cases),
+            max_recovered_cases = max(cases),
             total = sum(cases))
 ```
 
