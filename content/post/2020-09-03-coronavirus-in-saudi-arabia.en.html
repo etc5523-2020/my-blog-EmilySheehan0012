@@ -26,23 +26,20 @@ projects: []
 
 <div id="data-description" class="section level2">
 <h2>Data Description</h2>
-<p>The coronavirus data comprises of 7 variables and over 175,000 observations for a number of countries. The variables include; the date, province, country, latitude, longitude, type of case (i.e. confirmed/recovered) and number of daily cases.</p>
+<p>The coronavirus data comprises of 7 variables and over 175,000 observations for a number of countries. The variables include; date, province, country, latitude, longitude, type of case (i.e. confirmed/recovered) and number of daily cases.</p>
 <p>The raw data has been collected on a daily basis since the 22nd of January 2020 by John Hopkins University Center for Systems Science and Engineering. The sources for the raw data include; the World Health Organisation, the National Health Commission of the People’s Republic of China, the European Center for Disease Prevention and Control, the U.S Centers for Disease Control and Prevention, local media reports, 1point3acres, Worldometers.info, BNO, DXY and other state and national government health departments.</p>
-<p>This raw data has been tidied and collated into a package titled <em>coronavirus</em>, which has been used for this analysis.</p>
+<p>The raw data has been tidied and collated into a package titled <em>coronavirus</em>, which has subsequently been used for this analysis.</p>
 </div>
 <div id="an-explanation" class="section level2">
 <h2>An Explanation</h2>
-<p>Coronavirus is the name given to a range of respiratory illnesses originating from the same family (Raoult et al., 2020). Each virus varys in its symptoms, with some strains being more fatal than others.Some of the viruses include; Middle Eastern Respiratory Syndrome (MERS-CoV), Severe acute respiratory syndrome (SARS-CoV) and COVID-19.</p>
-<p>The Middle Eastern Respiratory Syndrome was first identified in Saudi Arabia in 2012. This analysis hopes to provide insight and compare the infection rate of MERS-CoV and COVID-19.</p>
+<p>Coronavirus is the name given to a range of respiratory illnesses originating from the same family (Raoult et al., 2020). Each virus varies in its symptoms, with some strains being more fatal than others. Some of the viruses that belong to this family include; Middle Eastern Respiratory Syndrome (MERS-CoV), Severe Acute Respiratory Syndrome (SARS-CoV) and COVID-19.</p>
 </div>
 <div id="a-comparison" class="section level2">
 <h2>A Comparison</h2>
-<p>Since appearing in Saudi Arabia in 2012, there have been a total of 2494 confirmed cases of MERS-CoV worldwide. Saudi Arabia was home to around 2102 infections, and had 780 deaths.</p>
-<p>Comparatively, there have been well <strong>over</strong> 317,000 cases of COVID-19 in Saudi Arabia since early 2020. The summary tables below provide some insight into the new cases and recovered cases. The maximum number of new cases on any given day was 867 cases, which is over 40% of the total number of MERS-CoV infections in Saudi Arabia over 8 years. The average number of new infections is around 4.283784 cases per day, while the average number of recovered cases per day is 5.085586. The maximum number of recovered cases on a given day was 5014 cases.</p>
-<p>Ultimately, the summary statistics and the interactive table suggest a clear difference in the incidence of MERS-CoV and COVID-19. Although MERS-CoV is much more fatal with an alarmingly high death rate, COVID-19 is much more infectious.</p>
-<table class="table" style="margin-left: auto; margin-right: auto;">
+<p>Since appearing in Saudi Arabia in 2012, MERS has spread to 27 countries resulting in a total of 2494 confirmed cases of MERS-CoV worldwide. Saudi Arabia was home to approximately 2102 infections, and had 780 deaths, resulting in a death rate of 37.11% (World Health Organisation, 2020).</p>
+<table class=" lightable-minimal" style='font-family: "Trebuchet MS", verdana, sans-serif; margin-left: auto; margin-right: auto;'>
 <caption>
-<span id="tab:saudi-confirmed">Table 1: </span>Summary Statistics for New COVID-19 Cases in Saudi Arabia
+<span id="tab:confirmed-table">Table 1: </span>Summary Statistics for New COVID-19 Cases in Saudi Arabia
 </caption>
 <thead>
 <tr>
@@ -71,9 +68,42 @@ Total Number of Cases
 </tr>
 </tbody>
 </table>
-<table class="table" style="margin-left: auto; margin-right: auto;">
+<p>Since early 2020, there have been approximately 317486 cases of COVID-19 in Saudi Arabia and 3956, thus resulting in a death rate of 1.25%.</p>
+<table class=" lightable-minimal" style='font-family: "Trebuchet MS", verdana, sans-serif; margin-left: auto; margin-right: auto;'>
 <caption>
-<span id="tab:saudi-recovered">Table 2: </span>Summary Statistics for Recovered COVID-19 Cases in Saudi Arabia
+<span id="tab:death-table">Table 2: </span>Summary Statistics for Deaths due to COVID-19 in Saudi Arabia
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+Average Deaths per day
+</th>
+<th style="text-align:right;">
+Maximum Number of Deaths per day
+</th>
+<th style="text-align:right;">
+Total Number of Deaths
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+0.1205357
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+3956
+</td>
+</tr>
+</tbody>
+</table>
+<p>The maximum number of new cases on any given day was 867 cases, which is approximately 41.25% of the total number of MERS-CoV infections in Saudi Arabia over an 8-year period, emphasising the magnitude of COVID-19. The average number of new infections per day is approximately 3.6428571 cases, whilst the average number of recovered cases per day is 4.4464286 cases. The maximum number of recovered cases on a given day was 5014 cases.</p>
+<table class=" lightable-minimal" style='font-family: "Trebuchet MS", verdana, sans-serif; margin-left: auto; margin-right: auto;'>
+<caption>
+<span id="tab:recovered-table">Table 3: </span>Summary Statistics for Recovered COVID-19 Cases in Saudi Arabia
 </caption>
 <thead>
 <tr>
@@ -102,6 +132,7 @@ Total Number of Recovered Cases
 </tr>
 </tbody>
 </table>
+<p>Ultimately, the summary statistics and the interactive table suggest a clear difference in the prevalance of MERS-CoV and COVID-19. Although MERS-CoV is much more fatal with an alarmingly high death rate, COVID-19 is much more infectious.</p>
 <div id="htmlwidget-1" style="width:100%;height:480px;" class="widgetframe html-widget"></div>
 <script type="application/json" data-for="htmlwidget-1">{"x":{"url":"/post/2020-09-03-coronavirus-in-saudi-arabia.en_files/figure-html//widgets/widget_interactive-table-saudi.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
 </div>
@@ -111,12 +142,12 @@ Total Number of Recovered Cases
 <a href="https://CRAN.R-project.org/package=widgetframe" class="uri">https://CRAN.R-project.org/package=widgetframe</a></p>
 <p>Hao Zhu (2020). kableExtra: Construct Complex Table with ‘kable’ and Pipe Syntax. R package version 1.2.1.
 <a href="https://CRAN.R-project.org/package=kableExtra" class="uri">https://CRAN.R-project.org/package=kableExtra</a></p>
-<p>Middle East respiratory syndrome coronavirus (MERS-CoV). (2020, March 10). Retrieved 4 September 2020, from<br />
-<a href="https://www.who.int/emergencies/mers-cov/en/" class="uri">https://www.who.int/emergencies/mers-cov/en/</a></p>
 <p>Rami Krispin and Jarrett Byrnes (2020). coronavirus: The 2019 Novel Coronavirus COVID-19 (2019-nCoV) Dataset.
 R package version 0.3.0.9000. <a href="https://github.com/RamiKrispin/coronavirus" class="uri">https://github.com/RamiKrispin/coronavirus</a></p>
 <p>Raoult, D., Zumla, A., Locatelli, F., Ippolito, G., &amp; Kroemer, G. (2020). Coronavirus infections: Epidemiological, clinical
 and immunological features and hypotheses. Cell Stress &amp; Chaperones, 4(4), 66–75.</p>
 <p>Wickham et al., (2019). Welcome to the tidyverse. Journal of Open Source Software, 4(43), 1686,
 <a href="https://doi.org/10.21105/joss.01686" class="uri">https://doi.org/10.21105/joss.01686</a></p>
+<p>World Health Organisation. (2020, March 10). Middle East respiratory syndrome coronavirus
+(MERS-CoV). Retrieved 4 September 2020, from <a href="https://www.who.int/emergencies/mers-cov/en/" class="uri">https://www.who.int/emergencies/mers-cov/en/</a></p>
 </div>
