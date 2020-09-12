@@ -31,6 +31,7 @@ library(htmlwidgets)
 
 ```{r load-data}
 data("coronavirus")
+update_dataset()
 ```
 
 
@@ -47,7 +48,9 @@ naniar::vis_miss(uk, warn_large_data = FALSE)
 
 ```{r uk-confirmed}
 uk_confirmed <- uk %>% 
-  filter(type == "confirmed") 
+  filter(type == "confirmed") %>% 
+  group_by(date) %>%
+  summarise(cases = sum(cases))
 ```
 
 ```{r uk-recovered}
@@ -60,7 +63,6 @@ uk_death <- uk %>%
   filter(type == "death") 
 ```
 
-
 ```{r}
 #https://www.r-graph-gallery.com/318-custom-dygraphs-time-series-example.html
 # create xts to use dygraph
@@ -70,18 +72,25 @@ uk_confirmed_dat <- xts(x = uk_confirmed$cases,
 # create plot
 uk_confirmed_plot <- dygraph(uk_confirmed_dat) %>%
   dyOptions(labelsUTC = TRUE, 
+            # fill the graph
             fillGraph=TRUE, 
-            fillAlpha=0.1, 
+            # change shade
+            fillAlpha=0.2,
+            # do not include a grid
             drawGrid = FALSE, 
-            colors="#D8AE5A") %>%
-  dyRangeSelector() %>%
-  dyCrosshair(direction = "vertical") %>%
-  dyHighlight(highlightCircleSize = 5, 
+            colors="red") %>%
+  # change the color to midnigth blue
+  dyRangeSelector(fillColor = "midnightblue",
+                  strokeColor = "midnightblue") %>%
+  # change so it draws a line through both the date and the case number
+  dyCrosshair(direction = "both") %>%
+  dyHighlight(highlightCircleSize = 6, 
               highlightSeriesBackgroundAlpha = 0.2, 
               hideOnMouseOut = FALSE)  %>%
   dyRoller(rollPeriod = 1)
 
-saveWidget(uk_confirmed_plot, file=(here::here("content/post/UK/uk_confirmed.html")))
+#saveWidget(uk_confirmed_plot, file=(here::here("content/post/UK/uk_confirmed.html")
+widgetframe::frameWidget(uk_confirmed_plot)
 ```
 
 
