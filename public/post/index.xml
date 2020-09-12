@@ -5,18 +5,31 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 03 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 12 Sep 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/post/featured.jpg</url>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
       <link>/post/</link>
     </image>
     
     <item>
+      <title>Coronavirus in the UK</title>
+      <link>/post/uk/coronavirus-in-the-uk/</link>
+      <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/post/uk/coronavirus-in-the-uk/</guid>
+      <description>
+
+
+&lt;p&gt;&lt;img src=&#34;/post/UK/2020-09-12-coronavirus-in-the-uk.en_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/UK/2020-09-12-coronavirus-in-the-uk.en_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Coronavirus in Saudi Arabia</title>
-      <link>/post/coronavirus-in-saudi-arabia/</link>
+      <link>/post/saudi/coronavirus-in-saudi-arabia/</link>
       <pubDate>Thu, 03 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/post/coronavirus-in-saudi-arabia/</guid>
+      <guid>/post/saudi/coronavirus-in-saudi-arabia/</guid>
       <description>
 &lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
@@ -58,18 +71,18 @@ Total Number of Cases
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-1411.049
+1437.005
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
 4919
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-317486
+275905
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;Since early 2020, there have been approximately 317486 cases of COVID-19 in Saudi Arabia and 3956, thus resulting in a death rate of 1.25%.&lt;/p&gt;
+&lt;p&gt;Since early 2020, there have been approximately 275905 cases of COVID-19 in Saudi Arabia and 2866, thus resulting in a death rate of 1.04%.&lt;/p&gt;
 &lt;table class=&#34; lightable-minimal&#34; style=&#39;font-family: &#34;Trebuchet MS&#34;, verdana, sans-serif; margin-left: auto; margin-right: auto;&#39;&gt;
 &lt;caption&gt;
 &lt;span id=&#34;tab:death-table&#34;&gt;Table 2: &lt;/span&gt;Summary Statistics for Deaths due to COVID-19 in Saudi Arabia
@@ -90,18 +103,18 @@ Total Number of Deaths
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-17.58222
+14.92708
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
 58
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-3956
+2866
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;The maximum number of new cases on any given day was 4919 cases, which is approximately 234.02% of the total number of MERS-CoV infections in Saudi Arabia over an 8-year period, emphasizing the magnitude of COVID-19. The average number of new infections per day is approximately 1411 cases, whilst the average number of recovered cases per day is approximately 1300 cases. The maximum number of recovered cases on a given day was 7718 cases.&lt;/p&gt;
+&lt;p&gt;The maximum number of new cases on any given day was 4919 cases, which is approximately 234.02% of the total number of MERS-CoV infections in Saudi Arabia over an 8-year period, emphasizing the magnitude of COVID-19. The average number of new infections per day is approximately 1437 cases, whilst the average number of recovered cases per day is approximately 1227 cases. The maximum number of recovered cases on a given day was 7718 cases.&lt;/p&gt;
 &lt;table class=&#34; lightable-minimal&#34; style=&#39;font-family: &#34;Trebuchet MS&#34;, verdana, sans-serif; margin-left: auto; margin-right: auto;&#39;&gt;
 &lt;caption&gt;
 &lt;span id=&#34;tab:recovered-table&#34;&gt;Table 3: &lt;/span&gt;Summary Statistics for Recovered COVID-19 Cases in Saudi Arabia
@@ -122,20 +135,20 @@ Total Number of Recovered Cases
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-1300.044
+1227.385
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
 7718
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-292510
+235658
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Ultimately, the summary statistics and the interactive table suggest a clear difference in the prevalence of MERS-CoV and COVID-19. Although MERS-CoV is much more fatal with an alarmingly high death rate, COVID-19 is much more infectious.&lt;/p&gt;
 &lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:480px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/2020-09-03-coronavirus-in-saudi-arabia.en_files/figure-html//widgets/widget_interactive-table-saudi.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/Saudi/2020-09-03-coronavirus-in-saudi-arabia.en_files/figure-html//widgets/widget_interactive-table-saudi.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
 &lt;p&gt;&lt;img src=&#34;/post/2020-09-03-coronavirus-in-saudi-arabia.en_files/featured.jpg&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level2&#34;&gt;

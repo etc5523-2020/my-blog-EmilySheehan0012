@@ -1,0 +1,103 @@
+---
+title: Coronavirus in the UK
+author: Emily Sheehan
+date: '2020-09-12'
+slug: coronavirus-in-the-uk
+categories: []
+tags: []
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2020-09-12T13:29:35+10:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+```{r load-libraries, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE)
+library(tidyverse)
+library(coronavirus)
+library(naniar)
+library(dygraphs)
+library(xts) 
+library(htmlwidgets)
+```
+
+```{r load-data}
+data("coronavirus")
+```
+
+
+```{r filter-uk}
+uk <- coronavirus %>%
+  filter(country == "United Kingdom")#,
+         #type != "recovered") 
+```
+
+```{r find-missing-data, include=FALSE}
+# Analyse how many variables are missing
+naniar::vis_miss(uk, warn_large_data = FALSE)
+```
+
+```{r uk-confirmed}
+uk_confirmed <- uk %>% 
+  filter(type == "confirmed") 
+```
+
+```{r uk-recovered}
+uk_recovered <- uk %>% 
+  filter(type == "recovered")
+```
+
+```{r uk-death}
+uk_death <- uk %>% 
+  filter(type == "death") 
+```
+
+
+```{r}
+#https://www.r-graph-gallery.com/318-custom-dygraphs-time-series-example.html
+# create xts to use dygraph
+uk_confirmed_dat <- xts(x = uk_confirmed$cases, 
+                        order.by = uk_confirmed$date)
+
+# create plot
+uk_confirmed_plot <- dygraph(uk_confirmed_dat) %>%
+  dyOptions(labelsUTC = TRUE, 
+            fillGraph=TRUE, 
+            fillAlpha=0.1, 
+            drawGrid = FALSE, 
+            colors="#D8AE5A") %>%
+  dyRangeSelector() %>%
+  dyCrosshair(direction = "vertical") %>%
+  dyHighlight(highlightCircleSize = 5, 
+              highlightSeriesBackgroundAlpha = 0.2, 
+              hideOnMouseOut = FALSE)  %>%
+  dyRoller(rollPeriod = 1)
+
+saveWidget(uk_confirmed_plot, file=(here::here("content/post/UK/uk_confirmed.html")))
+```
+
+
+```{r}
+uk_confirmed %>%
+  ggplot(aes(x = date,
+         y = cases)) +
+  geom_line()
+```
+
+```{r}
+ggplot(uk,
+       aes(fill = type,
+           x = date,
+           y = cases)) +
+  geom_bar(position = "stack",
+           stat = "identity")
+```
+
