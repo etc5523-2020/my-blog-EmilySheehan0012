@@ -5,8 +5,8 @@ date: '2020-09-12'
 slug: coronavirus-in-the-uk
 categories: []
 tags: []
-subtitle: ''
-summary: ''
+subtitle: "How the shift in public policy??? impacted the incidence of COVID-19 in the United Kingdom" 
+summary: "How the shift in public policy??? impacted the incidence of COVID-19 in the United Kingdom"
 authors: []
 lastmod: '2020-09-12T13:29:35+10:00'
 featured: no
@@ -53,24 +53,24 @@ uk_confirmed <- uk %>%
   summarise(cases = sum(cases))
 ```
 
-```{r uk-recovered}
-uk_recovered <- uk %>% 
-  filter(type == "recovered")
-```
-
 ```{r uk-death}
 uk_death <- uk %>% 
-  filter(type == "death") 
+  filter(type == "death") %>% 
+  group_by(date) %>%
+  summarise(cases = sum(cases))
 ```
 
-```{r}
+Is x axis label necessary? 
+
+```{r confirmed-plot}
 #https://www.r-graph-gallery.com/318-custom-dygraphs-time-series-example.html
 # create xts to use dygraph
 uk_confirmed_dat <- xts(x = uk_confirmed$cases, 
                         order.by = uk_confirmed$date)
 
 # create plot
-uk_confirmed_plot <- dygraph(uk_confirmed_dat) %>%
+uk_confirmed_plot <- dygraph(uk_confirmed_dat,
+                             main = "Number of New COVID-19 Cases in the United Kingdom per day") %>%
   dyOptions(labelsUTC = TRUE, 
             # fill the graph
             fillGraph=TRUE, 
@@ -87,10 +87,45 @@ uk_confirmed_plot <- dygraph(uk_confirmed_dat) %>%
   dyHighlight(highlightCircleSize = 6, 
               highlightSeriesBackgroundAlpha = 0.2, 
               hideOnMouseOut = FALSE)  %>%
-  dyRoller(rollPeriod = 1)
+  dyRoller(rollPeriod = 1) %>%
+  dyAxis("y", label = "Number of Cases") %>%
+  dyAxis("x", label = "Date") %>%
+  dySeries("V1", label = "Number of New Daily Cases") 
 
 #saveWidget(uk_confirmed_plot, file=(here::here("content/post/UK/uk_confirmed.html")
 widgetframe::frameWidget(uk_confirmed_plot)
+```
+
+```{r death-plot}
+uk_death_dat <- xts(x = uk_death$cases, 
+                        order.by = uk_death$date)
+
+# create plot
+uk_death_plot <- dygraph(uk_death_dat,
+                             main = "Number of COVID-19 Deaths in the United Kingdom per day") %>%
+  dyOptions(labelsUTC = TRUE, 
+            # fill the graph
+            fillGraph=TRUE, 
+            # change shade
+            fillAlpha=0.2,
+            # do not include a grid
+            drawGrid = FALSE, 
+            colors="grey") %>%
+  # change the color to midnight blue
+  dyRangeSelector(fillColor = "midnightblue",
+                  strokeColor = "midnightblue") %>%
+  # change so it draws a line through both the date and the case number
+  dyCrosshair(direction = "both") %>%
+  dyHighlight(highlightCircleSize = 6, 
+              highlightSeriesBackgroundAlpha = 0.2, 
+              hideOnMouseOut = FALSE)  %>%
+  dyRoller(rollPeriod = 1) %>%
+  dyAxis("y", label = "Number of Deaths per Day") %>%
+  dyAxis("x", label = "Date") %>%
+  dySeries("V1", label = "Number of Daily Deaths") 
+
+#saveWidget(uk_confirmed_plot, file=(here::here("content/post/UK/uk_confirmed.html")
+widgetframe::frameWidget(uk_death_plot)
 ```
 
 
