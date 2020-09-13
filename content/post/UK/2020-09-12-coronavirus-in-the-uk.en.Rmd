@@ -5,7 +5,7 @@ date: '2020-09-12'
 slug: coronavirus-in-the-uk
 categories: []
 tags: []
-subtitle: "How the shift in public policy??? impacted the incidence of COVID-19 in the United Kingdom" 
+subtitle: "Countries have had varying responses to mitigate the threat of COVID-19. For instance, the United Kingdom altered their response during the first wave and are now facing a second wave. This article will discuss how both responses have impacted the case numbers, and thus death rate." 
 summary: "How the shift in public policy??? impacted the incidence of COVID-19 in the United Kingdom"
 authors: []
 lastmod: '2020-09-12T13:29:35+10:00'
@@ -37,8 +37,7 @@ update_dataset()
 
 ```{r filter-uk}
 uk <- coronavirus %>%
-  filter(country == "United Kingdom")#,
-         #type != "recovered") 
+  filter(country == "United Kingdom")
 ```
 
 ```{r find-missing-data, include=FALSE}
@@ -60,7 +59,19 @@ uk_death <- uk %>%
   summarise(cases = sum(cases))
 ```
 
-Is x axis label necessary? 
+## The First Wave
+
+The United Kingdom had its first case of COVID-19 on the 31st of January, 2020. On the 1st of March, they had 6 cases. On the 7th of March, they had 55 cases. Two weeks later, they had 1215 cases. What went so wrong? 
+
+They sought for herd immunity. Without a vaccine. 
+
+In early March, the Prime Minister was reluctant to ban mass gatherings as the modeling suggested it would have little benefit. Instead, the initial response was "based on science", with Boris Johnson focusing on contact tracing and isolation of those exposed to COVID-19 (Hunter, 2020).
+
+Furthermore, the U.K. Chief Scientist suggested that 60% of the population would have to have COVID-19 in order to achieve herd immunity (Hunter, 2020). A leading epidemiologist likened this approach to "a satire" (Hanage, 2020), as this would mean a high number of deaths and devastation across the country. 
+
+On March 16, the UK shifted their public policy instructing those with symptoms to self-isolate, avoid mass gatherings, work from home if possible and avoid non-essential travel. Approximately three weeks later the number of COVID-19 cases began to peak. 
+
+## The Second Wave
 
 ```{r confirmed-plot}
 #https://www.r-graph-gallery.com/318-custom-dygraphs-time-series-example.html
@@ -144,4 +155,10 @@ ggplot(uk,
   geom_bar(position = "stack",
            stat = "identity")
 ```
+
+## References
+
+Hunter, D. J. (2020). Covid-19 and the stiff upper lip—The pandemic response in the United Kingdom. The New England Journal of Medicine. Retrieved from https://www.nejm.org/doi/full/10.1056/NEJMp2005755
+
+Hanage, W. (2020). I’m an epidemiologist. When I heard about Britain’s ‘herd immunity’coronavirus plan, I thought it was satire. The Guardian, 03–15.
 
