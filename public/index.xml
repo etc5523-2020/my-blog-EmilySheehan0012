@@ -90,6 +90,11 @@
 &lt;pre&gt;&lt;code&gt;## Updates are available on the coronavirus Dev version, do you want to update? n/Y&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;the-first-wave&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;The First Wave&lt;/h2&gt;
+&lt;p&gt;The United Kingdom had its first case of COVID-19 on the 31st of January, 2020. On the 1st of March, they had 6 cases. On the 7th of March, they had 55 cases. Two weeks later, they had 1215 cases.&lt;/p&gt;
+&lt;p&gt;In early March, the Prime Minister was reluctant to ban mass gatherings as the modeling suggested it would have little benefit. Instead, the initial response was “based on science”, with Boris Johnson focusing on contact tracing and isolation of those exposed to COVID-19 (Hunter, 2020).&lt;/p&gt;
+&lt;p&gt;The U.K. Chief Scientist suggested herd immunity would be achieved if 60% or more of the population recovered from COVID-19 (Hunter, 2020). In this sense, the UK was striving towards attaining herd immunity while protecting the elderly and immunocompromised. A leading epidemiologist likened this approach to “a satire” (Hanage, 2020), as this would mean a high number of deaths and devastation across the country.&lt;/p&gt;
+&lt;p&gt;On March 16, the UK shifted their public policy instructing citizens to avoid mass gatherings, work from home if possible, avoid non-essential travel and isolate if they had symptoms. On March 20, all pubs, all restaurants and most schools were closed. Approximately three weeks later the number of COVID-19 cases began to peak.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/UK/2020-09-12-coronavirus-in-the-uk.en_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;the-second-wave&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;The Second Wave&lt;/h2&gt;
@@ -97,8 +102,12 @@
 &lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/UK/2020-09-12-coronavirus-in-the-uk.en_files/figure-html//widgets/widget_confirmed-plot.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
 &lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:100%;height:480px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/UK/2020-09-12-coronavirus-in-the-uk.en_files/figure-html//widgets/widget_death-plot.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;p&gt;&lt;img src=&#34;/post/UK/2020-09-12-coronavirus-in-the-uk.en_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/post/UK/2020-09-12-coronavirus-in-the-uk.en_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;p&gt;Hunter, D. J. (2020). Covid-19 and the stiff upper lip—The pandemic response in the United Kingdom. The New England Journal of Medicine. Retrieved from &lt;a href=&#34;https://www.nejm.org/doi/full/10.1056/NEJMp2005755&#34; class=&#34;uri&#34;&gt;https://www.nejm.org/doi/full/10.1056/NEJMp2005755&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Hanage, W. (2020). I’m an epidemiologist. When I heard about Britain’s ‘herd immunity’coronavirus plan, I thought it was satire. The Guardian, 03–15.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

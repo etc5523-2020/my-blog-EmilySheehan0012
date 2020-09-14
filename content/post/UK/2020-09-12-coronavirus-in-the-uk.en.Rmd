@@ -27,6 +27,7 @@ library(naniar)
 library(dygraphs)
 library(xts) 
 library(htmlwidgets)
+
 ```
 
 ```{r load-data}
@@ -61,15 +62,74 @@ uk_death <- uk %>%
 
 ## The First Wave
 
-The United Kingdom had its first case of COVID-19 on the 31st of January, 2020. On the 1st of March, they had 6 cases. On the 7th of March, they had 55 cases. Two weeks later, they had 1215 cases. What went so wrong? 
+The United Kingdom had its first case of COVID-19 on the 31st of January, 2020. On the 1st of March, they had 6 cases. On the 7th of March, they had 55 cases. Two weeks later, they had 1215 cases. 
 
-They sought for herd immunity. Without a vaccine. 
+In early March, the Prime Minister was reluctant to ban mass gatherings as the modeling suggested it would have little benefit. Instead, the initial response was "based on science", with Boris Johnson focusing on contact tracing and isolation of those exposed to COVID-19 (Hunter, 2020). 
 
-In early March, the Prime Minister was reluctant to ban mass gatherings as the modeling suggested it would have little benefit. Instead, the initial response was "based on science", with Boris Johnson focusing on contact tracing and isolation of those exposed to COVID-19 (Hunter, 2020).
+The U.K. Chief Scientist suggested herd immunity would be achieved if 60% or more of the population recovered from COVID-19 (Hunter, 2020). In this sense, the UK was striving towards attaining herd immunity while protecting the elderly and immunocompromised. A leading epidemiologist likened this approach to "a satire" (Hanage, 2020), as this would mean a high number of deaths and devastation across the country. 
 
-Furthermore, the U.K. Chief Scientist suggested that 60% of the population would have to have COVID-19 in order to achieve herd immunity (Hunter, 2020). A leading epidemiologist likened this approach to "a satire" (Hanage, 2020), as this would mean a high number of deaths and devastation across the country. 
+On March 16, the UK shifted their public policy instructing citizens to avoid mass gatherings, work from home if possible, avoid non-essential travel and isolate if they had symptoms. On March 20, all pubs, all restaurants and most schools were closed. Approximately three weeks later the number of COVID-19 cases began to peak. 
 
-On March 16, the UK shifted their public policy instructing those with symptoms to self-isolate, avoid mass gatherings, work from home if possible and avoid non-essential travel. Approximately three weeks later the number of COVID-19 cases began to peak. 
+```{r}
+uk_confirmed %>%
+  ggplot(aes(x = date,
+         y = cases)) +
+  geom_line() +
+  theme_bw() +
+  theme(panel.border = element_blank(),
+        axis.ticks = element_blank()) +
+  xlab("Date") +
+  ylab("Number of New COVID-19 Cases") + 
+  annotate(geom="pointrange",
+           x=as.Date("2020-01-31"), 
+           y = 2,
+           ymin = 0, 
+           ymax = 1100, 
+           color = "red") +
+  annotate("text",  
+           x = as.Date("2020-01-31"), 
+           y = 1260, 
+           label = "First Case",
+           color= "red", 
+           size = 3.5) +
+  annotate(geom="pointrange",
+           x=as.Date("2020-03-06"), 
+           y = 6,
+           ymin = 0, 
+           ymax = 1500, 
+           color = "blue") +
+  annotate("text",  
+           x = as.Date("2020-03-01"), 
+           y = 1860, label = "1st March",
+           color= "blue", 
+           size = 3.5) +
+  annotate("text",  
+           x = as.Date("2020-03-01"), 
+           y = 1660, 
+           label = "6 cases",
+           color= "blue", 
+           size = 3.5) + 
+    annotate(geom="pointrange",
+           x=as.Date("2020-03-07"), 
+           y = 55,
+           ymin = 0, 
+           ymax = 2500, 
+           color = "red") +
+  annotate("text",  
+           x = as.Date("2020-03-07"),
+           y = 2860, 
+           label = "7th March",
+           color= "blue", 
+           size = 3.5) +
+  annotate("text",  
+           x = as.Date("2020-03-07"), 
+           y = 2660, 
+           label = "55 cases",
+           color= "blue", 
+           size = 3.5) 
+  
+```
+
 
 ## The Second Wave
 
@@ -101,7 +161,8 @@ uk_confirmed_plot <- dygraph(uk_confirmed_dat,
   dyRoller(rollPeriod = 1) %>%
   dyAxis("y", label = "Number of Cases") %>%
   dyAxis("x", label = "Date") %>%
-  dySeries("V1", label = "Number of New Daily Cases") 
+  dySeries("V1", label = "Number of New Daily Cases") #%>%
+  #dyShading(from = "2020-03-08", to = "2020-07-02") 
 
 #saveWidget(uk_confirmed_plot, file=(here::here("content/post/UK/uk_confirmed.html")
 widgetframe::frameWidget(uk_confirmed_plot)
@@ -140,12 +201,7 @@ widgetframe::frameWidget(uk_death_plot)
 ```
 
 
-```{r}
-uk_confirmed %>%
-  ggplot(aes(x = date,
-         y = cases)) +
-  geom_line()
-```
+
 
 ```{r}
 ggplot(uk,
