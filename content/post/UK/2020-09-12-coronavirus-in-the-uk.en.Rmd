@@ -66,10 +66,6 @@ The United Kingdom had its first case of COVID-19 on the 31st of January, 2020. 
 
 In early March, the Prime Minister was reluctant to ban mass gatherings as the modeling suggested it would have little benefit. Instead, the initial response was "based on science", with Boris Johnson focusing on contact tracing and isolation of those exposed to COVID-19 (Hunter, 2020). 
 
-The U.K. Chief Scientist suggested herd immunity would be achieved if 60% or more of the population recovered from COVID-19 (Hunter, 2020). In this sense, the UK was striving towards attaining herd immunity while protecting the elderly and immunocompromised. A leading epidemiologist likened this approach to "a satire" (Hanage, 2020), as this would mean a high number of deaths and devastation across the country. 
-
-On March 16, the UK shifted their public policy instructing citizens to avoid mass gatherings, work from home if possible, avoid non-essential travel and isolate if they had symptoms. On March 20, all pubs, all restaurants and most schools were closed. Approximately three weeks later the number of COVID-19 cases began to peak. 
-
 ```{r annotated-first-wave}
 uk_confirmed %>%
   ggplot(aes(x = date,
@@ -85,65 +81,65 @@ uk_confirmed %>%
            y = 2,
            ymin = 0, 
            ymax = 1100, 
-           color = "blue") +
+           color = "midnightblue") +
   annotate("text",  
            x = as.Date("2020-01-31"), 
            y = 1260, 
            label = "First Case",
-           color= "blue", 
+           color= "midnightblue", 
            size = 3.5) +
   annotate(geom="pointrange",
            x=as.Date("2020-03-06"), 
            y = 6,
            ymin = 0, 
            ymax = 1500, 
-           color = "blue") +
+           color = "midnightblue") +
   annotate("text",  
            x = as.Date("2020-02-23"), 
            y = 1860, label = "1st March",
-           color= "blue", 
+           color= "midnightblue", 
            size = 3.5) +
   annotate("text",  
            x = as.Date("2020-02-25"), 
            y = 1660, 
            label = "6 cases",
-           color= "blue", 
+           color= "midnightblue", 
            size = 3.5) + 
     annotate(geom="pointrange",
            x=as.Date("2020-03-07"), 
            y = 55,
            ymin = 0, 
            ymax = 2500, 
-           color = "blue") +
+           color = "midnightblue") +
   annotate("text",  
            x = as.Date("2020-03-07"),
            y = 2860, 
            label = "7th March",
-           color= "blue", 
+           color= "midnightblue", 
            size = 3.5) +
   annotate("text",  
            x = as.Date("2020-03-07"), 
            y = 2660, 
            label = "55 cases",
-           color= "blue", 
+           color= "midnightblue", 
            size = 3.5) + 
     annotate(geom="pointrange",
            x=as.Date("2020-03-21"), 
            y = 1215,
            ymin = 0, 
            ymax = 3300, 
-           color = "blue") +
+           color = "midnightblue") +
   annotate("text",  
            x = as.Date("2020-03-14"),
            y = 3660, 
            label = "21st March",
-           color= "blue", 
+           color= "midnightblue", 
            size = 3.5) +
   annotate("text",  
            x = as.Date("2020-03-14"), 
            y = 3460, 
            label = "1215 cases",
-           color= "blue", 
+           color= "midnightblue", 
            size = 3.5) +
   annotate(geom="pointrange",
            x=as.Date("2020-03-16"), 
@@ -221,10 +217,13 @@ uk_confirmed %>%
           subtitle = "This plot shows the important dates and relevant case numbers in the first wave of COVID-19.") 
 ```
 
+The U.K. Chief Scientist suggested herd immunity would be achieved if 60% or more of the population recovered from COVID-19 (Hunter, 2020). In this sense, the UK was striving towards attaining herd immunity while protecting the elderly and immunocompromised. A leading epidemiologist likened this approach to "a satire" (Hanage, 2020), as this would mean a high number of deaths and devastation across the country. 
+
+On March 16, the UK shifted their public policy instructing citizens to avoid mass gatherings, work from home if possible, avoid non-essential travel and isolate if they had symptoms. On March 20, all pubs, all restaurants and most schools were closed. Approximately three weeks later the number of COVID-19 cases began to peak. 
 
 ## The Second Wave
 
-The number of new COVID-19 cases have steadily increased since pubs and restaurants have re-opened. In addition, there has been an increase in illegal parties, which is leading to high levels of transmission among young people (Rosney, 2020). Although the daily case numbers are still considerably lower than April, the graph below is clearly trending upwards and the attitudes of civilians is becoming an increasing threat.
+The number of new COVID-19 cases have steadily increased since pubs and restaurants have re-opened. In addition, there has been an increase in illegal parties, which is leading to high levels of transmission among young people (Rosney, 2020). Although the daily case numbers are still considerably lower than April, the graph below is clearly trending upwards and the attitudes of civilians are becoming an increasing threat.
 
 This considered, the UK are on the brink of a second wave.
 
@@ -315,10 +314,10 @@ uk_confirmed_plot <- dygraph(uk_confirmed_dat) %>%
             fillAlpha=0.2,
             # do not include a grid
             drawGrid = FALSE, 
-            colors="blue") %>%
+            colors="grey") %>%
   # change the color to midnight blue
-  dyRangeSelector(fillColor = "grey",
-                  strokeColor = "grey") %>%
+  dyRangeSelector(fillColor = "midnightblue",
+                  strokeColor = "midnightblue") %>%
   # change so it draws a line through both the date and the case number
   dyCrosshair(direction = "both") %>%
   dyHighlight(highlightCircleSize = 6, 
@@ -350,7 +349,7 @@ uk_death_plot <- dygraph(uk_death_dat) %>%
             fillAlpha=0.2,
             # do not include a grid
             drawGrid = FALSE, 
-            colors="grey") %>%
+            colors="black") %>%
   # change the color to midnight blue
   dyRangeSelector(fillColor = "midnightblue",
                   strokeColor = "midnightblue") %>%
