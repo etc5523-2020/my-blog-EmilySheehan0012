@@ -79,18 +79,18 @@ uk_confirmed %>%
   theme(panel.border = element_blank(),
         axis.ticks = element_blank()) +
   xlab("Date") +
-  ylab("Number of New COVID-19 Cases") + 
+  ylab("New COVID-19 Cases") + 
   annotate(geom="pointrange",
            x=as.Date("2020-01-31"), 
            y = 2,
            ymin = 0, 
            ymax = 1100, 
-           color = "red") +
+           color = "blue") +
   annotate("text",  
            x = as.Date("2020-01-31"), 
            y = 1260, 
            label = "First Case",
-           color= "red", 
+           color= "blue", 
            size = 3.5) +
   annotate(geom="pointrange",
            x=as.Date("2020-03-06"), 
@@ -99,12 +99,12 @@ uk_confirmed %>%
            ymax = 1500, 
            color = "blue") +
   annotate("text",  
-           x = as.Date("2020-03-01"), 
+           x = as.Date("2020-02-23"), 
            y = 1860, label = "1st March",
            color= "blue", 
            size = 3.5) +
   annotate("text",  
-           x = as.Date("2020-03-01"), 
+           x = as.Date("2020-02-25"), 
            y = 1660, 
            label = "6 cases",
            color= "blue", 
@@ -114,7 +114,7 @@ uk_confirmed %>%
            y = 55,
            ymin = 0, 
            ymax = 2500, 
-           color = "red") +
+           color = "blue") +
   annotate("text",  
            x = as.Date("2020-03-07"),
            y = 2860, 
@@ -126,8 +126,62 @@ uk_confirmed %>%
            y = 2660, 
            label = "55 cases",
            color= "blue", 
-           size = 3.5) 
-  
+           size = 3.5) + 
+    annotate(geom="pointrange",
+           x=as.Date("2020-03-21"), 
+           y = 1215,
+           ymin = 0, 
+           ymax = 3300, 
+           color = "blue") +
+  annotate("text",  
+           x = as.Date("2020-03-14"),
+           y = 3660, 
+           label = "21st March",
+           color= "blue", 
+           size = 3.5) +
+  annotate("text",  
+           x = as.Date("2020-03-14"), 
+           y = 3460, 
+           label = "1215 cases",
+           color= "blue", 
+           size = 3.5) +
+  annotate(geom="pointrange",
+           x=as.Date("2020-03-16"), 
+           y = 615,
+           ymin = 0, 
+           ymax = 3900, 
+           color = "grey") +
+  annotate("text",  
+           x = as.Date("2020-03-05"),
+           y = 4200, 
+           label = "16th March",
+           color= "grey", 
+           size = 3.5) +
+  annotate("text",  
+           x = as.Date("2020-02-23"), 
+           y = 4000, 
+           label = "First Announcement",
+           color= "grey", 
+           size = 3.5) +
+  annotate(geom="pointrange",
+           x=as.Date("2020-03-20"), 
+           y = 1258,
+           ymin = 0, 
+           ymax = 4400, 
+           color = "grey") +
+  annotate("text",  
+           x = as.Date("2020-03-14"),
+           y = 4700, 
+           label = "20th March",
+           color= "grey", 
+           size = 3.5) +
+  annotate("text",  
+           x = as.Date("2020-02-22"), 
+           y = 4500, 
+           label = "Restaurants, pubs, schools closed",
+           color= "grey", 
+           size = 3.5) +
+  ggtitle("The First Wave")
 ```
 
 
@@ -149,10 +203,10 @@ uk_confirmed_plot <- dygraph(uk_confirmed_dat,
             fillAlpha=0.2,
             # do not include a grid
             drawGrid = FALSE, 
-            colors="red") %>%
-  # change the color to midnigth blue
-  dyRangeSelector(fillColor = "midnightblue",
-                  strokeColor = "midnightblue") %>%
+            colors="blue") %>%
+  # change the color to midnight blue
+  dyRangeSelector(fillColor = "grey",
+                  strokeColor = "grey") %>%
   # change so it draws a line through both the date and the case number
   dyCrosshair(direction = "both") %>%
   dyHighlight(highlightCircleSize = 6, 
