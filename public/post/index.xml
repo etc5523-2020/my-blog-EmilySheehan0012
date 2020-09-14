@@ -23,7 +23,6 @@
 &lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;pre&gt;&lt;code&gt;## Updates are available on the coronavirus Dev version, do you want to update? n/Y&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;the-first-wave&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;The First Wave&lt;/h2&gt;
 &lt;p&gt;The United Kingdom had its first case of COVID-19 on the 31st of January, 2020. On the 1st of March, they had 6 cases. On the 7th of March, they had 55 cases. Two weeks later, they had 1215 cases.&lt;/p&gt;
@@ -34,14 +33,18 @@
 &lt;/div&gt;
 &lt;div id=&#34;the-second-wave&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;The Second Wave&lt;/h2&gt;
+&lt;p&gt;The number of new COVID-19 cases have steadily increased since pubs and restaurants have re-opened. In addition, there has been an increase in illegal parties, which is leading to high levels of transmission among young people (Rosney, 2020). Although the daily case numbers are still considerably lower than April, the graph below is clearly trending upwards and the attitudes of civilians is becoming an increasing threat.&lt;/p&gt;
+&lt;p&gt;This considered, the UK are on the brink of a second wave.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;confirmed-covid-19-cases-in-the-uk-overtime&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Confirmed COVID-19 Cases in the UK Overtime&lt;/h2&gt;
+&lt;p&gt;Interactive display showing the confirmed number of COVID-19 cases in the UK since the 22nd of January, 2020.&lt;/p&gt;
 &lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:480px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/UK/2020-09-12-coronavirus-in-the-uk.en_files/figure-html//widgets/widget_confirmed-plot.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
 &lt;/div&gt;
 &lt;div id=&#34;confirmed-deaths-from-covid-19-in-the-uk-overtime&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Confirmed Deaths from COVID-19 in the UK Overtime&lt;/h2&gt;
+&lt;p&gt;Interactive display showing the number of COVID-19 deaths in the UK since the 22nd of January, 2020.&lt;/p&gt;
 &lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:100%;height:480px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/UK/2020-09-12-coronavirus-in-the-uk.en_files/figure-html//widgets/widget_death-plot.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
 &lt;/div&gt;
@@ -49,6 +52,7 @@
 &lt;h2&gt;References&lt;/h2&gt;
 &lt;p&gt;Hunter, D. J. (2020). Covid-19 and the stiff upper lip—The pandemic response in the United Kingdom. The New England Journal of Medicine. Retrieved from &lt;a href=&#34;https://www.nejm.org/doi/full/10.1056/NEJMp2005755&#34; class=&#34;uri&#34;&gt;https://www.nejm.org/doi/full/10.1056/NEJMp2005755&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Hanage, W. (2020). I’m an epidemiologist. When I heard about Britain’s ‘herd immunity’coronavirus plan, I thought it was satire. The Guardian, 03–15.&lt;/p&gt;
+&lt;p&gt;Rosney, D. (2020, September 7). Coronavirus: Young people breaking rules risk ‘second wave’. BBC. Retrieved from &lt;a href=&#34;https://www.bbc.com/news/newsbeat-54056771&#34; class=&#34;uri&#34;&gt;https://www.bbc.com/news/newsbeat-54056771&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

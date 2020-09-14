@@ -30,7 +30,7 @@ library(htmlwidgets)
 
 ```
 
-```{r load-data}
+```{r load-data, include = FALSE}
 data("coronavirus")
 update_dataset()
 ```
@@ -176,9 +176,45 @@ uk_confirmed %>%
            color= "grey", 
            size = 3.5) +
   annotate("text",  
-           x = as.Date("2020-02-22"), 
+           x = as.Date("2020-02-20"), 
            y = 4500, 
            label = "Restaurants and schools closed",
+           color= "grey", 
+           size = 3.5) +
+   annotate(geom="pointrange",
+           x=as.Date("2020-06-15"), 
+           y = 1031,
+           ymin = 0, 
+           ymax = 3400, 
+           color = "grey") +
+  annotate("text",  
+           x = as.Date("2020-06-15"),
+           y = 3700, 
+           label = "15th June",
+           color= "grey", 
+           size = 3.5) +
+  annotate("text",  
+           x = as.Date("2020-06-15"), 
+           y = 3500, 
+           label = "Non-essential shops reopen",
+           color= "grey", 
+           size = 3.5) +
+  annotate(geom="pointrange",
+           x=as.Date("2020-07-04"), 
+           y = 625,
+           ymin = 0, 
+           ymax = 2400, 
+           color = "grey") +
+  annotate("text",  
+           x = as.Date("2020-07-04"),
+           y = 2700, 
+           label = "4th July",
+           color= "grey", 
+           size = 3.5) +
+  annotate("text",  
+           x = as.Date("2020-07-04"), 
+           y = 2500, 
+           label = "Pubs reopen",
            color= "grey", 
            size = 3.5) +
   ggtitle("The First Wave of COVID-19 Cases",
@@ -188,9 +224,82 @@ uk_confirmed %>%
 
 ## The Second Wave
 
+The number of new COVID-19 cases have steadily increased since pubs and restaurants have re-opened. In addition, there has been an increase in illegal parties, which is leading to high levels of transmission among young people (Rosney, 2020). Although the daily case numbers are still considerably lower than April, the graph below is clearly trending upwards and the attitudes of civilians is becoming an increasing threat.
 
+This considered, the UK are on the brink of a second wave.
+
+```{r annotated-first-wave}
+uk_confirmed %>%
+  ggplot(aes(x = date,
+         y = cases)) +
+  geom_line() +
+  theme_bw() +
+  theme(panel.border = element_blank(),
+        axis.ticks = element_blank()) +
+  xlab("Date") +
+  ylab("New COVID-19 Cases") + 
+ 
+   annotate(geom="pointrange",
+           x=as.Date("2020-06-15"), 
+           y = 1031,
+           ymin = 0, 
+           ymax = 3400, 
+           color = "grey") +
+  annotate("text",  
+           x = as.Date("2020-06-15"),
+           y = 3700, 
+           label = "15th June",
+           color= "grey", 
+           size = 3.5) +
+  annotate("text",  
+           x = as.Date("2020-06-15"), 
+           y = 3500, 
+           label = "Non-essential shops reopen",
+           color= "grey", 
+           size = 3.5) +
+  annotate(geom="pointrange",
+           x=as.Date("2020-07-04"), 
+           y = 625,
+           ymin = 0, 
+           ymax = 2400, 
+           color = "grey") +
+  annotate("text",  
+           x = as.Date("2020-07-04"),
+           y = 2700, 
+           label = "4th July",
+           color= "grey", 
+           size = 3.5) +
+  annotate("text",  
+           x = as.Date("2020-07-04"), 
+           y = 2500, 
+           label = "Pubs reopen",
+           color= "grey", 
+           size = 3.5) +
+   annotate(geom="pointrange",
+           x=as.Date("2020-09-11"), 
+           y = 3544,
+           ymin = 0, 
+           ymax = 4400, 
+           color = "red") +
+  annotate("text",  
+           x = as.Date("2020-08-31"),
+           y = 4700, 
+           label = "11th September",
+           color= "red", 
+           size = 3.5) +
+  annotate("text",  
+           x = as.Date("2020-08-31"), 
+           y = 4500, 
+           label = "3544 cases",
+           color= "red", 
+           size = 3.5) +
+  ggtitle("The Second Wave of COVID-19 Cases",
+          subtitle = "This plot shows the relevant case numbers in the second wave of COVID-19 in the UK.") 
+```
 
 ## Confirmed COVID-19 Cases in the UK Overtime 
+Interactive display showing the confirmed number of COVID-19 cases in the UK since the 22nd of January, 2020. 
+
 ```{r confirmed-plot}
 #https://www.r-graph-gallery.com/318-custom-dygraphs-time-series-example.html
 # create xts to use dygraph
@@ -198,8 +307,7 @@ uk_confirmed_dat <- xts(x = uk_confirmed$cases,
                         order.by = uk_confirmed$date)
 
 # create plot
-uk_confirmed_plot <- dygraph(uk_confirmed_dat,
-                             main = "Number of New COVID-19 Cases in the United Kingdom per day") %>%
+uk_confirmed_plot <- dygraph(uk_confirmed_dat) %>%
   dyOptions(labelsUTC = TRUE, 
             # fill the graph
             fillGraph=TRUE, 
@@ -227,14 +335,14 @@ widgetframe::frameWidget(uk_confirmed_plot)
 ```
 
 ## Confirmed Deaths from COVID-19 in the UK Overtime
+Interactive display showing the number of COVID-19 deaths in the UK since the 22nd of January, 2020. 
 
 ```{r death-plot}
 uk_death_dat <- xts(x = uk_death$cases, 
                         order.by = uk_death$date)
 
 # create plot
-uk_death_plot <- dygraph(uk_death_dat,
-                             main = "Number of COVID-19 Deaths in the United Kingdom per day") %>%
+uk_death_plot <- dygraph(uk_death_dat) %>%
   dyOptions(labelsUTC = TRUE, 
             # fill the graph
             fillGraph=TRUE, 
@@ -266,4 +374,6 @@ widgetframe::frameWidget(uk_death_plot)
 Hunter, D. J. (2020). Covid-19 and the stiff upper lip—The pandemic response in the United Kingdom. The New England Journal of Medicine. Retrieved from https://www.nejm.org/doi/full/10.1056/NEJMp2005755
 
 Hanage, W. (2020). I’m an epidemiologist. When I heard about Britain’s ‘herd immunity’coronavirus plan, I thought it was satire. The Guardian, 03–15.
+
+Rosney, D. (2020, September 7). Coronavirus: Young people breaking rules risk ‘second wave’. BBC. Retrieved from https://www.bbc.com/news/newsbeat-54056771
 
