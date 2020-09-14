@@ -228,7 +228,7 @@ The number of new COVID-19 cases have steadily increased since pubs and restaura
 
 This considered, the UK are on the brink of a second wave.
 
-```{r annotated-first-wave}
+```{r annotated-second-wave}
 uk_confirmed %>%
   ggplot(aes(x = date,
          y = cases)) +
