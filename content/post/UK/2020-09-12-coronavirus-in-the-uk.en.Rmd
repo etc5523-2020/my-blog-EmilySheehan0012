@@ -70,7 +70,7 @@ The U.K. Chief Scientist suggested herd immunity would be achieved if 60% or mor
 
 On March 16, the UK shifted their public policy instructing citizens to avoid mass gatherings, work from home if possible, avoid non-essential travel and isolate if they had symptoms. On March 20, all pubs, all restaurants and most schools were closed. Approximately three weeks later the number of COVID-19 cases began to peak. 
 
-```{r}
+```{r annotated-first-wave}
 uk_confirmed %>%
   ggplot(aes(x = date,
          y = cases)) +
@@ -178,15 +178,19 @@ uk_confirmed %>%
   annotate("text",  
            x = as.Date("2020-02-22"), 
            y = 4500, 
-           label = "Restaurants, pubs, schools closed",
+           label = "Restaurants and schools closed",
            color= "grey", 
            size = 3.5) +
-  ggtitle("The First Wave")
+  ggtitle("The First Wave of COVID-19 Cases",
+          subtitle = "This plot shows the important dates and relevant case numbers in the first wave of COVID-19.") 
 ```
 
 
 ## The Second Wave
 
+
+
+## Confirmed COVID-19 Cases in the UK Overtime 
 ```{r confirmed-plot}
 #https://www.r-graph-gallery.com/318-custom-dygraphs-time-series-example.html
 # create xts to use dygraph
@@ -222,6 +226,8 @@ uk_confirmed_plot <- dygraph(uk_confirmed_dat,
 widgetframe::frameWidget(uk_confirmed_plot)
 ```
 
+## Confirmed Deaths from COVID-19 in the UK Overtime
+
 ```{r death-plot}
 uk_death_dat <- xts(x = uk_death$cases, 
                         order.by = uk_death$date)
@@ -254,17 +260,6 @@ uk_death_plot <- dygraph(uk_death_dat,
 widgetframe::frameWidget(uk_death_plot)
 ```
 
-
-
-
-```{r}
-ggplot(uk,
-       aes(fill = type,
-           x = date,
-           y = cases)) +
-  geom_bar(position = "stack",
-           stat = "identity")
-```
 
 ## References
 
