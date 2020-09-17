@@ -31,8 +31,8 @@ library(htmlwidgets)
 ```
 
 ```{r load-data, include = FALSE}
-data("coronavirus")
 update_dataset()
+data("coronavirus")
 ```
 
 
