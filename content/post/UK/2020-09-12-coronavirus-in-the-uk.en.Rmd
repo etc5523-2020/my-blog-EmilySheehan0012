@@ -214,7 +214,7 @@ uk_confirmed %>%
            color= "grey", 
            size = 3.5) +
   ggtitle("The First Wave of COVID-19 Cases",
-          subtitle = "This plot shows the important dates and relevant case numbers in the first wave of COVID-19.") 
+          subtitle = "This plot shows the important dates and relevant case numbers in the first wave of COVID-19. It is a line plot, with dates on the x-axis and the number of new cases on the y-axis. The steep increase in case numbers (or infection rate) should be noted, particularly before and just after the announcement of school closures.") 
 ```
 
 The U.K. Chief Scientist suggested herd immunity would be achieved if 60% or more of the population recovered from COVID-19 (Hunter, 2020). In this sense, the UK was striving towards attaining herd immunity while protecting the elderly and immunocompromised. A leading epidemiologist likened this approach to "a satire" (Hanage, 2020), as this would mean a high number of deaths and devastation across the country. 
@@ -293,7 +293,7 @@ uk_confirmed %>%
            color= "red", 
            size = 3.5) +
   ggtitle("The Second Wave of COVID-19 Cases",
-          subtitle = "This plot shows the relevant case numbers in the second wave of COVID-19 in the UK.") 
+          subtitle = "This plot shows the relevant case numbers in the second wave of COVID-19 in the UK. It is a line plot, with dates on the x-axis and the number of new cases on the y-axis. The steady increase in case numbers should be noted after the reopening of the pubs. Additionally, the high number of cases on September 11 is evidence of a second wave of COVID-19.") 
 ```
 
 ## Confirmed COVID-19 Cases in the UK Overtime 
@@ -366,7 +366,6 @@ uk_death_plot <- dygraph(uk_death_dat) %>%
 #saveWidget(uk_confirmed_plot, file=(here::here("content/post/UK/uk_confirmed.html")
 widgetframe::frameWidget(uk_death_plot)
 ```
-
 
 ## References
 
