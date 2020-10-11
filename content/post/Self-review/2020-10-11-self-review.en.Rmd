@@ -45,7 +45,7 @@ I did the explanation aspect of the app well because I provided an example of ho
 
 The plotly event that I created allows the user to 'double-click' on the plot to reveal a timeline of events, as mentioned above. I think I did this well because the user can easily compare and link the timeline events to points in the plot and draw conclusions on whether the restrictions were an effective measure in controlling the case numbers (as an example). 
 
-My use of the input data to generate outputs was well done because it meant the user has complete freedom in the outputs they want to generate as every output depends on the inputs they want to use. ??
+My use of the input data to generate outputs was well done because it meant the user has complete freedom in the outputs they want to generate as every output depends on the inputs they want to use.
 
 #### What could I improve on?
 
