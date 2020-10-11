@@ -51,7 +51,7 @@ My use of the input data to generate outputs was well done because it meant the 
 
 My comparison table could definitely be improved. For example, when 'death' is input the table and values change, however, the column headings are the same. In this context, the headings don't make sense as they are titled 'number of new cases' and 'total number of cases'. it would make more sense if they changed according to input and were titled 'number of new deaths' and 'total number of deaths'. 
 
-In addition, I coded the title of the plot so that it would change according to input. This means that if the user selects 'confirmed' the title would change to 'The number of **confirmed** COVID-19 cases', and so on. However, when 'death' is selected the title changes to 'The number of **death** COVID-19 cases'. This doesn't make gramatical sense, however, the `paste0` function did not have the capacity to change the whole title based on the selected case type. In hindsight, I should have used an `ifelse` statement to produce a better title. 
+In addition, I coded the title of the plot so that it would change according to input. This means that if the user selects 'confirmed' the title would change to 'The number of **confirmed** COVID-19 cases', and so on. However, when 'death' is selected the title changes to 'The number of **death** COVID-19 cases'. This doesn't make grammatical sense, however, the `paste0` function did not have the capacity to change the whole title based on the selected case type. In hindsight, I should have used an `ifelse` statement to produce a better title. 
 
 #### A plausible addition to my app
 
@@ -63,9 +63,7 @@ To overcome this problem, I have two approaches that I think would be feasible. 
 
 #### An implausible addition to my app 
 
-age group breakdown 
-whos spreading the virus 
-whos dying frm it
+I would have liked to draw insights on the age-group breakdown of cases. However, the data didn't have information on the ages of those infected. Having this data would have given the user an indication on the age of those spreading the virus and the age of those dying from this virus. This information would be pivotal in determining the age groups that need to be protected from the virus. 
 
 
 
