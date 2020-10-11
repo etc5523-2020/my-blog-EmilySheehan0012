@@ -53,15 +53,19 @@ My comparison table could definitely be improved. For example, when 'death' is i
 
 In addition, I coded the title of the plot so that it would change according to input. This means that if the user selects 'confirmed' the title would change to 'The number of **confirmed** COVID-19 cases', and so on. However, when 'death' is selected the title changes to 'The number of **death** COVID-19 cases'. This doesn't make gramatical sense, however, the `paste0` function did not have the capacity to change the whole title based on the selected case type. In hindsight, I should have used an `ifelse` statement to produce a better title. 
 
-#### What is a plausible addition that I would like to add?
+#### A plausible addition to my app
 
 I would like to update the map so that the circles change based on the case type chosen (as well as the states and/or territories chosen). 
 
 The main issue with this change is the map doesn't delete circles if the input has been changed. For example, if I select New South Wales and Victoria, and then deselect Victoria, it won't update the map. This means that if a case type is chosen and then changed, the map will layer the two case types which is problematic for comparison. 
 
-To overcome this problem, I have two approaches that I think would be feasible. The first would involve use of an `ifelse` function and the second improving the use of the reactive function. 
+To overcome this problem, I have two approaches that I think would be feasible. The first would involve use the `ifelse` function and the second improving the use of the reactive function. 
 
-#### 
+#### An implausible addition to my app 
+
+age group breakdown 
+whos spreading the virus 
+whos dying frm it
 
 
 

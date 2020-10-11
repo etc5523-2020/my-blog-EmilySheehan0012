@@ -110,14 +110,17 @@ Finally, to use the comparison table the user must select a date or dates to com
 &lt;p&gt;My comparison table could definitely be improved. For example, when ‘death’ is input the table and values change, however, the column headings are the same. In this context, the headings don’t make sense as they are titled ‘number of new cases’ and ‘total number of cases’. it would make more sense if they changed according to input and were titled ‘number of new deaths’ and ‘total number of deaths’.&lt;/p&gt;
 &lt;p&gt;In addition, I coded the title of the plot so that it would change according to input. This means that if the user selects ‘confirmed’ the title would change to ‘The number of &lt;strong&gt;confirmed&lt;/strong&gt; COVID-19 cases’, and so on. However, when ‘death’ is selected the title changes to ‘The number of &lt;strong&gt;death&lt;/strong&gt; COVID-19 cases’. This doesn’t make gramatical sense, however, the &lt;code&gt;paste0&lt;/code&gt; function did not have the capacity to change the whole title based on the selected case type. In hindsight, I should have used an &lt;code&gt;ifelse&lt;/code&gt; statement to produce a better title.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;what-is-a-plausible-addition-that-i-would-like-to-add&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;What is a plausible addition that I would like to add?&lt;/h4&gt;
+&lt;div id=&#34;a-plausible-addition-to-my-app&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;A plausible addition to my app&lt;/h4&gt;
 &lt;p&gt;I would like to update the map so that the circles change based on the case type chosen (as well as the states and/or territories chosen).&lt;/p&gt;
 &lt;p&gt;The main issue with this change is the map doesn’t delete circles if the input has been changed. For example, if I select New South Wales and Victoria, and then deselect Victoria, it won’t update the map. This means that if a case type is chosen and then changed, the map will layer the two case types which is problematic for comparison.&lt;/p&gt;
-&lt;p&gt;To overcome this problem, I have two approaches that I think would be feasible. The first would involve use of an &lt;code&gt;ifelse&lt;/code&gt; function and the second improving the use of the reactive function.&lt;/p&gt;
+&lt;p&gt;To overcome this problem, I have two approaches that I think would be feasible. The first would involve use the &lt;code&gt;ifelse&lt;/code&gt; function and the second improving the use of the reactive function.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;section&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;&lt;/h4&gt;
+&lt;div id=&#34;an-implausible-addition-to-my-app&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;An implausible addition to my app&lt;/h4&gt;
+&lt;p&gt;age group breakdown
+whos spreading the virus
+whos dying frm it&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
