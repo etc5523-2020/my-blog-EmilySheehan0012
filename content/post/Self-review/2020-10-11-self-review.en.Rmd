@@ -6,7 +6,7 @@ slug: self-review
 categories: []
 tags: []
 subtitle: 'In the last couple of weeks, I have been busy creating my own shiny application. For someone who had no experience using R prior to starting this course, it was quite a challenging task, however, most enjoyable. '
-summary: 'A review on my Shiny App'
+summary: 'A review on my Shiny App.'
 authors: []
 lastmod: '2020-10-11T12:15:06+11:00'
 featured: no

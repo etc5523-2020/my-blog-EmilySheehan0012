@@ -22,14 +22,14 @@
 
 &lt;div id=&#34;introducing-my-shiny-app&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Introducing my Shiny App&lt;/h2&gt;
-&lt;p&gt;The purpose of my app is to enable users to develop insights on the state of Coronavirus in Australia through comparing data between chosen states over time.&lt;/p&gt;
-&lt;p&gt;My app is broken up into tabs to enhance its usability. There is an ‘About’ tab, a ‘How’ tab and an example tab detailing how I drew insights on Coronavirus using the app. This hopes to give the user a clear understanding on how to use the app, irrespective of their technological competence/capacity.&lt;/p&gt;
+&lt;p&gt;The purpose of my app is to enable users to develop insights into the state of Coronavirus in Australia by comparing data between chosen states and territories over time.&lt;/p&gt;
+&lt;p&gt;My app is broken up into tabs to enhance its usability. There is an ‘About’ tab, a ‘How’ tab and an example tab detailing how I drew insights on Coronavirus using the app. This hopes to give the user a clear understanding on how to use the app, irrespective of their technological competence.&lt;/p&gt;
 &lt;p&gt;The ‘output’ tabs each contain a visualisation. The first has a map, the second has a line plot and the third has a comparison table.&lt;/p&gt;
 &lt;p&gt;To use the map, the user must input the states that they want to compare. It will generate a circle, and the size of the circle is dependent on the number of confirmed cases in that state to date. The user can click on the circle and it will give the exact number of confirmed cases in that state or territory. In the example below, I have chosen New South Wales and Victoria.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/post/Self-review/map-nsw-vic.png&#34; /&gt;
-The user must choose a case type in addition to the previously selected states or territories to use the plot. Therefore the confirmed, recovered or daily death toll between chosen states or territories can be compared overtime. To produce the plot below I have chosen ‘confirmed’ as my case type. The plot can be ‘double-clicked’ to reveal a timeline of COVID-19 related events.&lt;/p&gt;
+The user must choose a case type in addition to the previously selected states or territories to use the plot. Then the confirmed, recovered or daily death toll between chosen states or territories can be compared overtime. To produce the plot below I have chosen ‘confirmed’ as my case type. The plot can be ‘double-clicked’ to reveal a timeline of COVID-19 related events.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/post/Self-review/plot-nsw-vic.png&#34; /&gt;
-Finally, to use the comparison table the user must select a date or dates to compare in addition to the previously selected states/territories and case type. This will generate a table which will allow them to compare daily case numbers and total case numbers for the chosen case type. dates and areas. I chose the earliest and most recent date to generate the comparison table below.&lt;/p&gt;
+Finally, to use the comparison table the user must select a date or dates to compare in addition to the previously selected states/territories and case type. This will generate a table which will allow them to compare daily case numbers and total case numbers for the chosen case type, dates and areas. I chose the earliest and most recent date to generate the comparison table below.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/post/Self-review/comparison-nsw-vic.png&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;self-review&#34; class=&#34;section level2&#34;&gt;
@@ -37,8 +37,8 @@ Finally, to use the comparison table the user must select a date or dates to com
 &lt;div id=&#34;what-did-i-do-well&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;What did I do well?&lt;/h4&gt;
 &lt;p&gt;The three aspects of the app that I did well were the user input and plotly event aspect of the app, as well as the explanation on how to use the app.&lt;/p&gt;
-&lt;p&gt;I did the explanation aspect of the app well because I provided an example of how I derived insights and arrived at conclusions using the app.&lt;/p&gt;
-&lt;p&gt;The plotly event that I created allows the user to ‘double-click’ on the plot to reveal a timeline of events, as mentioned above. I think I did this well because the user can easily compare and link the timeline events to points in the plot and draw conclusions on whether the restrictions were an effective measure in controlling the case numbers (as an example).&lt;/p&gt;
+&lt;p&gt;I did the explanation aspect of the app well because I provided an example of how I derived insights and arrived at conclusions using the app. This is a fundamental part of the app because if it is not explained well then the app is essentially useless to the user.&lt;/p&gt;
+&lt;p&gt;The plotly event that I created allows the user to ‘double-click’ on the plot to reveal a timeline of events, as mentioned above. I did this well because the user can easily compare and link the timeline events to points in the plot and draw conclusions on whether the restrictions were an effective measure in controlling the case numbers (as an example).&lt;/p&gt;
 &lt;p&gt;My use of the input data to generate outputs was well done because it meant the user has complete freedom in the outputs they want to generate as every output depends on the inputs they want to use.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;what-could-i-improve-on&#34; class=&#34;section level4&#34;&gt;
@@ -50,7 +50,6 @@ Finally, to use the comparison table the user must select a date or dates to com
 &lt;h4&gt;A plausible addition to my app&lt;/h4&gt;
 &lt;p&gt;I would like to update the map so that the circles change based on the case type chosen (as well as the states and/or territories chosen).&lt;/p&gt;
 &lt;p&gt;The main issue with this change is the map doesn’t delete circles if the input has been changed. For example, if I select New South Wales and Victoria, and then deselect Victoria, it won’t update the map. This means that if a case type is chosen and then changed, the map will layer the two case types which is problematic for comparison.&lt;/p&gt;
-&lt;p&gt;To overcome this problem, I have two approaches that I think would be feasible. The first would involve use the &lt;code&gt;ifelse&lt;/code&gt; function and the second improving the use of the reactive function.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;an-implausible-addition-to-my-app&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;An implausible addition to my app&lt;/h4&gt;
@@ -152,18 +151,18 @@ Total Number of Cases
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-1437.005
+1295.525
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
 4919
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-275905
+338132
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;Since early 2020, there have been approximately 275905 cases of COVID-19 in Saudi Arabia and 2866, thus resulting in a death rate of 1.04%.&lt;/p&gt;
+&lt;p&gt;Since early 2020, there have been approximately 338132 cases of COVID-19 in Saudi Arabia and 4972, thus resulting in a death rate of 1.47%.&lt;/p&gt;
 &lt;table class=&#34; lightable-minimal&#34; style=&#39;font-family: &#34;Trebuchet MS&#34;, verdana, sans-serif; margin-left: auto; margin-right: auto;&#39;&gt;
 &lt;caption&gt;
 &lt;span id=&#34;tab:death-table&#34;&gt;Table 2: &lt;/span&gt;Summary Statistics for Deaths due to COVID-19 in Saudi Arabia
@@ -184,18 +183,18 @@ Total Number of Deaths
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-14.92708
+19.04981
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
 58
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-2866
+4972
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;The maximum number of new cases on any given day was 4919 cases, which is approximately 234.02% of the total number of MERS-CoV infections in Saudi Arabia over an 8-year period, emphasizing the magnitude of COVID-19. The average number of new infections per day is approximately 1437 cases, whilst the average number of recovered cases per day is approximately 1227 cases. The maximum number of recovered cases on a given day was 7718 cases.&lt;/p&gt;
+&lt;p&gt;The maximum number of new cases on any given day was 4919 cases, which is approximately 234.02% of the total number of MERS-CoV infections in Saudi Arabia over an 8-year period, emphasizing the magnitude of COVID-19. The average number of new infections per day is approximately 1296 cases, whilst the average number of recovered cases per day is approximately 1240 cases. The maximum number of recovered cases on a given day was 7718 cases.&lt;/p&gt;
 &lt;table class=&#34; lightable-minimal&#34; style=&#39;font-family: &#34;Trebuchet MS&#34;, verdana, sans-serif; margin-left: auto; margin-right: auto;&#39;&gt;
 &lt;caption&gt;
 &lt;span id=&#34;tab:recovered-table&#34;&gt;Table 3: &lt;/span&gt;Summary Statistics for Recovered COVID-19 Cases in Saudi Arabia
@@ -216,13 +215,13 @@ Total Number of Recovered Cases
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-1227.385
+1240.494
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
 7718
 &lt;/td&gt;
 &lt;td style=&#34;text-align:right;&#34;&gt;
-235658
+323769
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
