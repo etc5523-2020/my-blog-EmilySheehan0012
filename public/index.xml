@@ -109,8 +109,7 @@
 &lt;h4&gt;Simplifying the Server Side&lt;/h4&gt;
 &lt;p&gt;The &lt;code&gt;dailyplot&lt;/code&gt; function was designed to create a line graph showing either the daily confirmed, daily death or daily recovered cases depending on what the user input is.&lt;/p&gt;
 &lt;p&gt;Since this function relies on the user interface input, its functionality must be considered in the context of the application. Using this function, the application generates three plots displaying the daily confirmed, daily deaths and daily recovered respectively. Therefore, it does what I thought it would.&lt;/p&gt;
-&lt;p&gt;The &lt;code&gt;covidtable&lt;/code&gt; produces a table using the DT package, and is used in the first tab of the application. Since this output requires no user input, it can be run in the console.&lt;/p&gt;
-&lt;p&gt;When run in the console it generates a summary table of COVID-19 cases, thereby doing what I thought it would do.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;covidtable&lt;/code&gt; produces a table using the DT package, and is used in the first tab of the application. Since this output requires no user input, it can be run in the console. When run in the console it generates a summary table of COVID-19 cases, thereby doing what I thought it would do.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;improvements&#34; class=&#34;section level2&#34;&gt;
@@ -133,13 +132,12 @@
 &lt;div id=&#34;the-shiny-application&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;The Shiny Application&lt;/h4&gt;
 &lt;p&gt;The app itself is very impressive and I really like how interactive it is. It generates a number of informative plots, and I was able to learn a lot about the state of coronavirus in each region.&lt;/p&gt;
-&lt;p&gt;I think the only suggestion or improvement that I would recommend would be changing the slider input in the first tab to a slider range. This would allow users to see countries with cases between a set of values, rather than just being able to see countries with cases below a certain value.&lt;/p&gt;
+&lt;p&gt;I think the only improvement that I would recommend would be changing the slider input in the first tab to a slider range. This would allow users to see countries with cases between a set of values, rather than just being able to see countries with cases below a certain value.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;the-documentation&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;The Documentation&lt;/h4&gt;
-&lt;p&gt;The documentation in the README file is very detailed and provides a great overview of the package and the application.&lt;/p&gt;
-&lt;p&gt;Additionally, the functions have been well documented, however, my recommendation would be to provide additional information on what the functions return.&lt;/p&gt;
-&lt;p&gt;For example, it would be helpful if there was a subtitle in the documentation for the &lt;code&gt;covidtable&lt;/code&gt; function detailing that the output was a &lt;code&gt;dt&lt;/code&gt; table with the following columns; country, confirmed, deaths, recovered, region, cases per 100000, etc. This would be informative, as the user could decide what dataset would be most appropriate for the function.&lt;/p&gt;
+&lt;p&gt;The documentation in the README file is very detailed and provides a great overview of the package and the application. Additionally, the functions have been well documented, however, my recommendation would be to provide additional information on what the functions return.&lt;/p&gt;
+&lt;p&gt;For example, it would be helpful if there was a subtitle in the documentation for the &lt;code&gt;covidtable&lt;/code&gt; function detailing that the output was a &lt;code&gt;dt&lt;/code&gt; table with the following columns; country, confirmed, deaths, recovered, region, cases per 100000, etc. This would be informative as the user could decide what dataset would be most appropriate for the function.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;key-takeaways&#34; class=&#34;section level2&#34;&gt;
@@ -152,8 +150,8 @@
 &lt;h4&gt;Documentation&lt;/h4&gt;
 &lt;p&gt;The package includes all the following forms of documentation:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; &lt;strong&gt;Installation instructions:&lt;/strong&gt; for the package is found in README&lt;/li&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; &lt;strong&gt;Vignette(s)&lt;/strong&gt; demonstrating major functionality that runs successfully locally&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; The &lt;strong&gt;Installation instructions:&lt;/strong&gt; for the package are found in the README&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; &lt;strong&gt;Vignette(s)&lt;/strong&gt; demonstrate major functionality and run successfully locally&lt;/li&gt;
 &lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; &lt;strong&gt;Function Documentation:&lt;/strong&gt; for all exported functions in R help&lt;/li&gt;
 &lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; &lt;strong&gt;Examples&lt;/strong&gt; for all exported functions in R Help that run successfully locally&lt;/li&gt;
 &lt;/ul&gt;
@@ -163,8 +161,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; &lt;strong&gt;Installation:&lt;/strong&gt; Installation succeeds as documented.&lt;/li&gt;
 &lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; &lt;strong&gt;Functionality:&lt;/strong&gt; Any functional claims of the software been confirmed.&lt;/li&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; &lt;strong&gt;Automated tests:&lt;/strong&gt; Unit tests cover essential functions of the package
-and a reasonable range of inputs and conditions. All tests pass on the local machine.&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; &lt;strong&gt;Automated tests:&lt;/strong&gt; Unit tests cover essential functions of the package and a reasonable range of inputs and conditions. All tests pass on the local machine.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
