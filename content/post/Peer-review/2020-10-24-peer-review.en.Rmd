@@ -6,7 +6,7 @@ slug: peer-review
 categories: []
 tags: []
 subtitle: ""
-summary: 'A peer review of Helen Evangelina's Package and Shiny App.'
+summary: "A peer review of Helen Evangelina's Package and Shiny App."
 authors: []
 lastmod: '2020-10-24T12:02:56+11:00'
 featured: no
