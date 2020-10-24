@@ -77,6 +77,41 @@
     </item>
     
     <item>
+      <title>Peer Review</title>
+      <link>/post/peer-review/peer-review/</link>
+      <pubDate>Sat, 24 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>/post/peer-review/peer-review/</guid>
+      <description>
+
+
+&lt;div id=&#34;summary&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;I am reviewing a package written by Helen Evangelina titled “covid19shiny”.&lt;/p&gt;
+&lt;p&gt;The purpose of the package is to provide users with a shiny application which presents the state of COVID-19 worldwide.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-did-i-think-this-package-would-do&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What did I think this package would do?&lt;/h2&gt;
+&lt;p&gt;The covid19shiny package has three datasets; &lt;code&gt;covid19wrangled&lt;/code&gt;, &lt;code&gt;covid19total&lt;/code&gt;, &lt;code&gt;worldshp&lt;/code&gt; and four functions; &lt;code&gt;launch_app&lt;/code&gt;, &lt;code&gt;selectInput01&lt;/code&gt;, &lt;code&gt;dailyplot&lt;/code&gt; and &lt;code&gt;covidtable&lt;/code&gt;. That considered, I thought the package would launch the application, provide a wrangled dataset for the application to use and simplify the user interface and server side of the shiny application.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;did-it-do-it&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Did it do it?&lt;/h2&gt;
+&lt;p&gt;I am going to break this question up into three subsections; the datatsets, the launch function,&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;are-the-improvements-that-could-be-made-to-the-code-are-there-improvements-that-could-be-made-to-the-shiny-app-inside-the-package-is-the-documentation-sucicient-to-get-started&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Are the improvements that could be made to the code? Are there improvements that could be made to the shiny app inside the package? Is the documentation sucicient to get started?&lt;/h2&gt;
+&lt;p&gt;A paragraph that explores the questions: Are the improvements that could be made to the code? Are there
+improvements that could be made to the shiny app inside the package? Is the documentation sucicient to get
+started? (4 marks)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-have-i-learnt-from-reviewing-the-package&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What have I learnt from reviewing the package?&lt;/h2&gt;
+&lt;p&gt;A paragraph wrapping up what you’ve learned from reviewing the package? (2 marks)
+function&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>My Shiny App</title>
       <link>/post/self-review/self-review/</link>
       <pubDate>Sun, 11 Oct 2020 00:00:00 +0000</pubDate>

@@ -1,0 +1,44 @@
+---
+title: Peer Review
+author: Emily Sheehan
+date: '2020-10-24'
+slug: peer-review
+categories: []
+tags: []
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2020-10-24T12:02:56+11:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+## Summary
+
+I am reviewing a package written by Helen Evangelina titled "covid19shiny".
+
+The purpose of the package is to provide users with a shiny application which presents the state of COVID-19 worldwide.
+
+## What did I think this package would do?
+
+The covid19shiny package has three datasets; `covid19wrangled`, `covid19total`, `worldshp` and four functions; `launch_app`, `selectInput01`, `dailyplot` and `covidtable`. That considered, I thought the package would launch the application, provide a wrangled dataset for the application to use and simplify the user interface and server side of the shiny application. 
+
+## Did it do it?
+
+I am going to break this question up into three subsections; the datatsets, the launch function, 
+
+
+
+
+## Are the improvements that could be made to the code? Are there improvements that could be made to the shiny app inside the package? Is the documentation sucicient to get started?
+A paragraph that explores the questions: Are the improvements that could be made to the code? Are there
+improvements that could be made to the shiny app inside the package? Is the documentation sucicient to get
+started? (4 marks)
+
+## What have I learnt from reviewing the package?
+A paragraph wrapping up what you’ve learned from reviewing the package? (2 marks)
+\dontrun function 
