@@ -19,18 +19,35 @@ projects: []
 
 
 
-<div id="summary" class="section level2">
-<h2>Summary</h2>
 <p>I am reviewing a package written by Helen Evangelina titled “covid19shiny”.</p>
 <p>The purpose of the package is to provide users with a shiny application which presents the state of COVID-19 worldwide.</p>
-</div>
-<div id="what-did-i-think-this-package-would-do" class="section level2">
-<h2>What did I think this package would do?</h2>
+<div id="inital-thoughts" class="section level2">
+<h2>Inital Thoughts</h2>
 <p>The covid19shiny package has three datasets; <code>covid19wrangled</code>, <code>covid19total</code>, <code>worldshp</code> and four functions; <code>launch_app</code>, <code>selectInput01</code>, <code>dailyplot</code> and <code>covidtable</code>. That considered, I thought the package would launch the application, provide a wrangled dataset for the application to use and simplify the user interface and server side of the shiny application.</p>
 </div>
-<div id="did-it-do-it" class="section level2">
-<h2>Did it do it?</h2>
-<p>I am going to break this question up into three subsections; the datatsets, the launch function,</p>
+<div id="how-did-the-package-perform" class="section level2">
+<h2>How did the package perform?</h2>
+<p>I am going to break this question up into four subsections to consider whether the package performed as I thought it would.</p>
+<div id="the-datasets" class="section level4">
+<h4>The Datasets</h4>
+<p>When I entered <code>covid19shiny::covid19wrangled</code>, <code>covid19shiny::covid19total</code> and <code>covid19shiny::worldshp</code> into the console they did exactly what I thought they would do. They presented the relevant data frames, which were then called upon in the app. This dramatically reduced the amount of code in the application.</p>
+</div>
+<div id="the-launch-app-function" class="section level4">
+<h4>The Launch App Function</h4>
+<p>The <code>covid19shiny::launch_app</code> launched the application, as expected. This function was particularly useful as it meant the application could be easily accessed.</p>
+</div>
+<div id="simplifying-the-user-interface" class="section level4">
+<h4>Simplifying the User Interface</h4>
+<p>The <code>selectInput01</code> function has the capacity to produce a <code>selectInput</code> in the shiny application for the chosen input. In the application, it generated a drop down box which allows the user to select any country or area they wish to analyse.</p>
+<p>When I entered the example code into the console it generated a strange output, however, that is because it is a function that needs to be used in the context of an application. That considered, it did exactly what I thought it would do and generated a number of drop down boxes which were used throughout the application.</p>
+</div>
+<div id="simplifying-the-server-side" class="section level4">
+<h4>Simplifying the Server Side</h4>
+<p>The <code>dailyplot</code> function was designed to create a line graph showing either the daily confirmed, daily death or daily recovered cases depending on what the user input is.</p>
+<p>Since this function relies on the user interface input, its functionality must be considered in the context of the application. Using this function, the application generates three plots displaying the daily confirmed, daily deaths and daily recovered respectively. Therefore, it does what I thought it would.</p>
+<p>The <code>covidtable</code> produces a table using the DT package, and is used in the first tab of the application. Since this output requires no user input, it can be run in the console.</p>
+<p>When run in the console it generates a summary table of COVID-19 cases, thereby doing what I thought it would do.</p>
+</div>
 </div>
 <div id="are-the-improvements-that-could-be-made-to-the-code-are-there-improvements-that-could-be-made-to-the-shiny-app-inside-the-package-is-the-documentation-sucicient-to-get-started" class="section level2">
 <h2>Are the improvements that could be made to the code? Are there improvements that could be made to the shiny app inside the package? Is the documentation sucicient to get started?</h2>

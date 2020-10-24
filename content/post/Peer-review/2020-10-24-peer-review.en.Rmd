@@ -17,22 +17,41 @@ image:
 projects: []
 ---
 
-## Summary
-
 I am reviewing a package written by Helen Evangelina titled "covid19shiny".
 
 The purpose of the package is to provide users with a shiny application which presents the state of COVID-19 worldwide.
 
-## What did I think this package would do?
+## Inital Thoughts 
 
 The covid19shiny package has three datasets; `covid19wrangled`, `covid19total`, `worldshp` and four functions; `launch_app`, `selectInput01`, `dailyplot` and `covidtable`. That considered, I thought the package would launch the application, provide a wrangled dataset for the application to use and simplify the user interface and server side of the shiny application. 
 
-## Did it do it?
+## How did the package perform?
 
-I am going to break this question up into three subsections; the datatsets, the launch function, 
+I am going to break this question up into four subsections to consider whether the package performed as I thought it would.
 
+#### The Datasets
 
+When I entered `covid19shiny::covid19wrangled`, `covid19shiny::covid19total` and `covid19shiny::worldshp` into the console they did exactly what I thought they would do. They presented the relevant data frames, which were then called upon in the app. This dramatically reduced the amount of code in the application. 
 
+#### The Launch App Function
+
+The `covid19shiny::launch_app` launched the application, as expected. This function was particularly useful as it meant the application could be easily accessed. 
+
+#### Simplifying the User Interface
+
+The `selectInput01` function has the capacity to produce a `selectInput` in the shiny application for the chosen input. In the application, it generated a drop down box which allows the user to select any country or area they wish to analyse. 
+
+When I entered the example code into the console it generated a strange output, however, that is because it is a function that needs to be used in the context of an application. That considered, it did exactly what I thought it would do and generated a number of drop down boxes which were used throughout the application. 
+
+#### Simplifying the Server Side
+
+The `dailyplot` function was designed to create a line graph showing either the daily confirmed, daily death or daily recovered cases depending on what the user input is. 
+
+Since this function relies on the user interface input, its functionality must be considered in the context of the application. Using this function, the application generates three plots displaying the daily confirmed, daily deaths and daily recovered respectively. Therefore, it does what I thought it would. 
+
+The `covidtable` produces a table using the DT package, and is used in the first tab of the application. Since this output requires no user input, it can be run in the console. 
+
+When run in the console it generates a summary table of COVID-19 cases, thereby doing what I thought it would do. 
 
 ## Are the improvements that could be made to the code? Are there improvements that could be made to the shiny app inside the package? Is the documentation sucicient to get started?
 A paragraph that explores the questions: Are the improvements that could be made to the code? Are there

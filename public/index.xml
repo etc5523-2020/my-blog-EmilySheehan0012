@@ -84,18 +84,35 @@
       <description>
 
 
-&lt;div id=&#34;summary&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Summary&lt;/h2&gt;
 &lt;p&gt;I am reviewing a package written by Helen Evangelina titled “covid19shiny”.&lt;/p&gt;
 &lt;p&gt;The purpose of the package is to provide users with a shiny application which presents the state of COVID-19 worldwide.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;what-did-i-think-this-package-would-do&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;What did I think this package would do?&lt;/h2&gt;
+&lt;div id=&#34;inital-thoughts&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Inital Thoughts&lt;/h2&gt;
 &lt;p&gt;The covid19shiny package has three datasets; &lt;code&gt;covid19wrangled&lt;/code&gt;, &lt;code&gt;covid19total&lt;/code&gt;, &lt;code&gt;worldshp&lt;/code&gt; and four functions; &lt;code&gt;launch_app&lt;/code&gt;, &lt;code&gt;selectInput01&lt;/code&gt;, &lt;code&gt;dailyplot&lt;/code&gt; and &lt;code&gt;covidtable&lt;/code&gt;. That considered, I thought the package would launch the application, provide a wrangled dataset for the application to use and simplify the user interface and server side of the shiny application.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;did-it-do-it&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Did it do it?&lt;/h2&gt;
-&lt;p&gt;I am going to break this question up into three subsections; the datatsets, the launch function,&lt;/p&gt;
+&lt;div id=&#34;how-did-the-package-perform&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;How did the package perform?&lt;/h2&gt;
+&lt;p&gt;I am going to break this question up into four subsections to consider whether the package performed as I thought it would.&lt;/p&gt;
+&lt;div id=&#34;the-datasets&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;The Datasets&lt;/h4&gt;
+&lt;p&gt;When I entered &lt;code&gt;covid19shiny::covid19wrangled&lt;/code&gt;, &lt;code&gt;covid19shiny::covid19total&lt;/code&gt; and &lt;code&gt;covid19shiny::worldshp&lt;/code&gt; into the console they did exactly what I thought they would do. They presented the relevant data frames, which were then called upon in the app. This dramatically reduced the amount of code in the application.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-launch-app-function&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;The Launch App Function&lt;/h4&gt;
+&lt;p&gt;The &lt;code&gt;covid19shiny::launch_app&lt;/code&gt; launched the application, as expected. This function was particularly useful as it meant the application could be easily accessed.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;simplifying-the-user-interface&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Simplifying the User Interface&lt;/h4&gt;
+&lt;p&gt;The &lt;code&gt;selectInput01&lt;/code&gt; function has the capacity to produce a &lt;code&gt;selectInput&lt;/code&gt; in the shiny application for the chosen input. In the application, it generated a drop down box which allows the user to select any country or area they wish to analyse.&lt;/p&gt;
+&lt;p&gt;When I entered the example code into the console it generated a strange output, however, that is because it is a function that needs to be used in the context of an application. That considered, it did exactly what I thought it would do and generated a number of drop down boxes which were used throughout the application.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;simplifying-the-server-side&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Simplifying the Server Side&lt;/h4&gt;
+&lt;p&gt;The &lt;code&gt;dailyplot&lt;/code&gt; function was designed to create a line graph showing either the daily confirmed, daily death or daily recovered cases depending on what the user input is.&lt;/p&gt;
+&lt;p&gt;Since this function relies on the user interface input, its functionality must be considered in the context of the application. Using this function, the application generates three plots displaying the daily confirmed, daily deaths and daily recovered respectively. Therefore, it does what I thought it would.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;covidtable&lt;/code&gt; produces a table using the DT package, and is used in the first tab of the application. Since this output requires no user input, it can be run in the console.&lt;/p&gt;
+&lt;p&gt;When run in the console it generates a summary table of COVID-19 cases, thereby doing what I thought it would do.&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;are-the-improvements-that-could-be-made-to-the-code-are-there-improvements-that-could-be-made-to-the-shiny-app-inside-the-package-is-the-documentation-sucicient-to-get-started&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Are the improvements that could be made to the code? Are there improvements that could be made to the shiny app inside the package? Is the documentation sucicient to get started?&lt;/h2&gt;
