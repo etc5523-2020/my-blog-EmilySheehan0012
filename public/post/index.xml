@@ -88,23 +88,18 @@
 &lt;h4&gt;Documentation&lt;/h4&gt;
 &lt;p&gt;The package includes all the following forms of documentation:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Installation instructions:&lt;/strong&gt; for the package is found in README&lt;/li&gt;
-&lt;li&gt;[ˇ ] &lt;strong&gt;Vignette(s)&lt;/strong&gt; demonstrating major functionality that runs successfully locally&lt;/li&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; /&gt;
-&lt;strong&gt;Function Documentation:&lt;/strong&gt; for all exported functions in R help&lt;/li&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; /&gt;
-&lt;strong&gt;Examples&lt;/strong&gt; for all exported functions in R Help that run successfully locally&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; &lt;strong&gt;Installation instructions:&lt;/strong&gt; for the package is found in README&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; &lt;strong&gt;Vignette(s)&lt;/strong&gt; demonstrating major functionality that runs successfully locally&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; &lt;strong&gt;Function Documentation:&lt;/strong&gt; for all exported functions in R help&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; &lt;strong&gt;Examples&lt;/strong&gt; for all exported functions in R Help that run successfully locally&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;functionality&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Functionality&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; /&gt;
-&lt;strong&gt;Installation:&lt;/strong&gt; Installation succeeds as documented.&lt;/li&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; /&gt;
-&lt;strong&gt;Functionality:&lt;/strong&gt; Any functional claims of the software been confirmed.&lt;/li&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; disabled=&#34;&#34; /&gt;
-&lt;strong&gt;Automated tests:&lt;/strong&gt; Unit tests cover essential functions of the package
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; &lt;strong&gt;Installation:&lt;/strong&gt; Installation succeeds as documented.&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; &lt;strong&gt;Functionality:&lt;/strong&gt; Any functional claims of the software been confirmed.&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; &lt;strong&gt;Automated tests:&lt;/strong&gt; Unit tests cover essential functions of the package
 and a reasonable range of inputs and conditions. All tests pass on the local machine.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
