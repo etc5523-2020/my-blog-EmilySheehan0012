@@ -1,11 +1,11 @@
 ---
-title: Peer Review
+title: A Peer Review
 author: Emily Sheehan
 date: '2020-10-24'
 slug: peer-review
 categories: []
 tags: []
-subtitle: ''
+subtitle: "A peer review of Helen Evangelina's Package and Shiny App."
 summary: ''
 authors: []
 lastmod: '2020-10-24T12:02:56+11:00'
