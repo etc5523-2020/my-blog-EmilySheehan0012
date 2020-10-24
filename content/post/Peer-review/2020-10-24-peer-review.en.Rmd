@@ -17,9 +17,7 @@ image:
 projects: []
 ---
 
-I am reviewing a package written by Helen Evangelina titled "covid19shiny".
-
-The purpose of the package is to provide users with a shiny application which presents the state of COVID-19 worldwide.
+I am reviewing a package written by Helen Evangelina titled "covid19shiny". The purpose of the package is to provide users with a shiny application which presents the state of COVID-19 worldwide.
 
 ## Inital Thoughts 
 
@@ -53,11 +51,61 @@ The `covidtable` produces a table using the DT package, and is used in the first
 
 When run in the console it generates a summary table of COVID-19 cases, thereby doing what I thought it would do. 
 
-## Are the improvements that could be made to the code? Are there improvements that could be made to the shiny app inside the package? Is the documentation sucicient to get started?
-A paragraph that explores the questions: Are the improvements that could be made to the code? Are there
-improvements that could be made to the shiny app inside the package? Is the documentation sucicient to get
-started? (4 marks)
+## Improvements
 
-## What have I learnt from reviewing the package?
-A paragraph wrapping up what you’ve learned from reviewing the package? (2 marks)
-\dontrun function 
+#### The Code
+
+I think the code is well-written, however, I would suggest changing `selectinput01` function to allow the user to select multiple regions and compare them using the outputs, as shown below. 
+
+```{r eval=FALSE}
+selectInput01 <- function(id, choices) {
+  selectInput(id, 
+              label = paste0("which ", 
+                             id, 
+                             " do you want to view?"),  
+              choices = c("All", 
+                          choices),
+              selected = "All",
+# My suggestion to allow the user to select and compare multiple regions.
+              multiple = TRUE)
+}
+```
+
+
+#### The Shiny Application
+
+The app itself is very impressive and I really like how interactive it is. It generates a number of informative plots, and I was able to learn a lot about the state of coronavirus in each region. 
+
+I think the only suggestion or improvement that I would recommend would be changing the slider input in the first tab to a slider range. This would allow users to see countries with cases between a set of values, rather than just being able to see countries with cases below a certain value. 
+
+#### The Documentation
+
+The documentation in the README file is very detailed and provides a great overview of the package and the application. 
+
+Additionally, the functions have been well documented, however, my recommendation would be to provide additional information on what the functions return. 
+
+For example, it would be helpful if there was a subtitle in the documentation for the `covidtable` function detailing that the output was a `dt` table with the following columns; country, confirmed, deaths, recovered, region, cases per 100000, etc. This would be informative, as the user could decide what dataset would be most appropriate for the function. 
+
+## Key Takeaways
+
+I learnt that you can add `\dontrun{}` to the examples in the documentation. As the name suggests, this means that the examples won't run and therefore will not slow down the `devtools::check()` and `pkgdown::build_site()`. This would have been a welcome addition to my package, as I had some difficulty figuring out why `devtools` was taking so long to check my package. 
+
+## Appendix
+
+#### Documentation
+
+The package includes all the following forms of documentation:
+
+-  **Installation instructions:** for the package is found in README
+- [ˇ ] **Vignette(s)** demonstrating major functionality that runs successfully locally
+- [ ] **Function Documentation:** for all exported functions in R help
+- [ ] **Examples** for all exported functions in R Help that run successfully locally
+
+#### Functionality
+
+- [ ] **Installation:** Installation succeeds as documented.
+- [ ] **Functionality:** Any functional claims of the software been confirmed.
+- [ ] **Automated tests:** Unit tests cover essential functions of the package
+and a reasonable range of inputs and conditions. All tests pass on the local machine.
+
+

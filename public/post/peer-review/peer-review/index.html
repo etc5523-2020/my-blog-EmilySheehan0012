@@ -30,8 +30,7 @@
   
     
   
-  <meta name="description" content="I am reviewing a package written by Helen Evangelina titled “covid19shiny”.
-The purpose of the package is to provide users with a shiny application which presents the state of COVID-19 worldwide.">
+  <meta name="description" content="I am reviewing a package written by Helen Evangelina titled “covid19shiny”. The purpose of the package is to provide users with a shiny application which presents the state of COVID-19 worldwide.">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/peer-review/peer-review/">
@@ -250,8 +249,7 @@ The purpose of the package is to provide users with a shiny application which pr
   <meta property="og:site_name" content="Emily Sheehan&#39;s Blog">
   <meta property="og:url" content="/post/peer-review/peer-review/">
   <meta property="og:title" content="Peer Review | Emily Sheehan&#39;s Blog">
-  <meta property="og:description" content="I am reviewing a package written by Helen Evangelina titled “covid19shiny”.
-The purpose of the package is to provide users with a shiny application which presents the state of COVID-19 worldwide."><meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="og:description" content="I am reviewing a package written by Helen Evangelina titled “covid19shiny”. The purpose of the package is to provide users with a shiny application which presents the state of COVID-19 worldwide."><meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     
@@ -301,7 +299,7 @@ The purpose of the package is to provide users with a shiny application which pr
       "url": "/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "I am reviewing a package written by Helen Evangelina titled “covid19shiny”.\nThe purpose of the package is to provide users with a shiny application which presents the state of COVID-19 worldwide."
+  "description": "I am reviewing a package written by Helen Evangelina titled “covid19shiny”. The purpose of the package is to provide users with a shiny application which presents the state of COVID-19 worldwide."
 }
 </script>
 
@@ -551,7 +549,7 @@ The purpose of the package is to provide users with a shiny application which pr
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    3 min read
+    4 min read
   </span>
   
 
@@ -590,8 +588,7 @@ The purpose of the package is to provide users with a shiny application which pr
       
 
 
-<p>I am reviewing a package written by Helen Evangelina titled “covid19shiny”.</p>
-<p>The purpose of the package is to provide users with a shiny application which presents the state of COVID-19 worldwide.</p>
+<p>I am reviewing a package written by Helen Evangelina titled “covid19shiny”. The purpose of the package is to provide users with a shiny application which presents the state of COVID-19 worldwide.</p>
 <div id="inital-thoughts" class="section level2">
 <h2>Inital Thoughts</h2>
 <p>The covid19shiny package has three datasets; <code>covid19wrangled</code>, <code>covid19total</code>, <code>worldshp</code> and four functions; <code>launch_app</code>, <code>selectInput01</code>, <code>dailyplot</code> and <code>covidtable</code>. That considered, I thought the package would launch the application, provide a wrangled dataset for the application to use and simplify the user interface and server side of the shiny application.</p>
@@ -620,16 +617,65 @@ The purpose of the package is to provide users with a shiny application which pr
 <p>When run in the console it generates a summary table of COVID-19 cases, thereby doing what I thought it would do.</p>
 </div>
 </div>
-<div id="are-the-improvements-that-could-be-made-to-the-code-are-there-improvements-that-could-be-made-to-the-shiny-app-inside-the-package-is-the-documentation-sucicient-to-get-started" class="section level2">
-<h2>Are the improvements that could be made to the code? Are there improvements that could be made to the shiny app inside the package? Is the documentation sucicient to get started?</h2>
-<p>A paragraph that explores the questions: Are the improvements that could be made to the code? Are there
-improvements that could be made to the shiny app inside the package? Is the documentation sucicient to get
-started? (4 marks)</p>
+<div id="improvements" class="section level2">
+<h2>Improvements</h2>
+<div id="the-code" class="section level4">
+<h4>The Code</h4>
+<p>I think the code is well-written, however, I would suggest changing <code>selectinput01</code> function to allow the user to select multiple regions and compare them using the outputs, as shown below.</p>
+<pre class="r"><code>selectInput01 &lt;- function(id, choices) {
+  selectInput(id, 
+              label = paste0(&quot;which &quot;, 
+                             id, 
+                             &quot; do you want to view?&quot;),  
+              choices = c(&quot;All&quot;, 
+                          choices),
+              selected = &quot;All&quot;,
+# My suggestion to allow the user to select and compare multiple regions.
+              multiple = TRUE)
+}</code></pre>
 </div>
-<div id="what-have-i-learnt-from-reviewing-the-package" class="section level2">
-<h2>What have I learnt from reviewing the package?</h2>
-<p>A paragraph wrapping up what you’ve learned from reviewing the package? (2 marks)
-function</p>
+<div id="the-shiny-application" class="section level4">
+<h4>The Shiny Application</h4>
+<p>The app itself is very impressive and I really like how interactive it is. It generates a number of informative plots, and I was able to learn a lot about the state of coronavirus in each region.</p>
+<p>I think the only suggestion or improvement that I would recommend would be changing the slider input in the first tab to a slider range. This would allow users to see countries with cases between a set of values, rather than just being able to see countries with cases below a certain value.</p>
+</div>
+<div id="the-documentation" class="section level4">
+<h4>The Documentation</h4>
+<p>The documentation in the README file is very detailed and provides a great overview of the package and the application.</p>
+<p>Additionally, the functions have been well documented, however, my recommendation would be to provide additional information on what the functions return.</p>
+<p>For example, it would be helpful if there was a subtitle in the documentation for the <code>covidtable</code> function detailing that the output was a <code>dt</code> table with the following columns; country, confirmed, deaths, recovered, region, cases per 100000, etc. This would be informative, as the user could decide what dataset would be most appropriate for the function.</p>
+</div>
+</div>
+<div id="key-takeaways" class="section level2">
+<h2>Key Takeaways</h2>
+<p>I learnt that you can add <code>\dontrun{}</code> to the examples in the documentation. As the name suggests, this means that the examples won’t run and therefore will not slow down the <code>devtools::check()</code> and <code>pkgdown::build_site()</code>. This would have been a welcome addition to my package, as I had some difficulty figuring out why <code>devtools</code> was taking so long to check my package.</p>
+</div>
+<div id="appendix" class="section level2">
+<h2>Appendix</h2>
+<div id="documentation" class="section level4">
+<h4>Documentation</h4>
+<p>The package includes all the following forms of documentation:</p>
+<ul>
+<li><strong>Installation instructions:</strong> for the package is found in README</li>
+<li>[ˇ ] <strong>Vignette(s)</strong> demonstrating major functionality that runs successfully locally</li>
+<li><input type="checkbox" disabled="" />
+<strong>Function Documentation:</strong> for all exported functions in R help</li>
+<li><input type="checkbox" disabled="" />
+<strong>Examples</strong> for all exported functions in R Help that run successfully locally</li>
+</ul>
+</div>
+<div id="functionality" class="section level4">
+<h4>Functionality</h4>
+<ul>
+<li><input type="checkbox" disabled="" />
+<strong>Installation:</strong> Installation succeeds as documented.</li>
+<li><input type="checkbox" disabled="" />
+<strong>Functionality:</strong> Any functional claims of the software been confirmed.</li>
+<li><input type="checkbox" disabled="" />
+<strong>Automated tests:</strong> Unit tests cover essential functions of the package
+and a reasonable range of inputs and conditions. All tests pass on the local machine.</li>
+</ul>
+</div>
 </div>
 
     </div>
